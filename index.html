@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Awesome Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to my 2026 Portfolio!</h1>
-    <p>This site is hosted on GitHub Pages.</p>
+
+    <nav>
+        <div class="container">
+            <span class="logo">Portfolio.</span>
+            <ul>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span class="highlight">Your Name</span>.</h1>
+            <p>A Creative Developer specializing in interactive web experiences.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </header>
+
+    <section id="projects" class="container">
+        <h2>Selected Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-image" style="background: #e0e0e0;"></div>
+                <div class="card-content">
+                    <h3>Project Title One</h3>
+                    <p>Brief description of the tech stack and your impact on the project.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background: #d0d0d0;"></div>
+                <div class="card-content">
+                    <h3>Project Title Two</h3>
+                    <p>A mobile-first application focused on user accessibility and speed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Let's build something amazing together.</p>
+            <a href="mailto:yourname@email.com" class="btn-outline">Say Hello</a>
+            <div class="socials">
+                <a href="#">GitHub</a> • <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
