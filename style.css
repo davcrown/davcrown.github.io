@@ -77,7 +77,44 @@ nav a { text-decoration: none; color: var(--text); font-weight: 700; }
 .card:hover { transform: translateY(-5px); }
 .card-image { height: 200px; width: 100%; }
 .card-content { padding: 1.5rem; }
+/* Metrics Ribbon */
+.metrics-bar {
+    display: flex;
+    justify-content: space-around;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border-left: 5px solid var(--primary);
+}
 
+.metric {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.metric strong { font-size: 1.8rem; color: var(--primary); }
+.metric span { font-size: 0.9rem; color: var(--gray); text-transform: uppercase; }
+
+/* Viz Container */
+.viz-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Code Snippet Styling */
+code {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
 /* Footer */
 footer {
     text-align: center;
