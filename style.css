@@ -230,13 +230,44 @@ a:hover {
     font-size: 1.2rem;
 }
 
-/* RESPONSIVE: Stack sections on mobile */
-@media (max-width: 768px) {
-    .data-block.split {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .galaxy-hero h1 { font-size: 2rem; }
-    .galaxy-hero h2 { font-size: 1.4rem; }
+/* Container for the side-by-side grid */
+.data-block-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+    margin: 80px auto;
+    max-width: var(--max-width);
+}
+
+/* Ensure the header spans both columns */
+.full-width {
+    grid-column: span 2;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Consistent height for text boxes to keep the grid aligned */
+.min-height {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Visualization styling for the grid */
+.grid-item .viz img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item .viz img:hover {
+    transform: scale(1.02); /* Subtle zoom for desktop interaction */
 }
