@@ -271,3 +271,26 @@ a:hover {
 .grid-item .viz img:hover {
     transform: scale(1.02); /* Subtle zoom for desktop interaction */
 }
+
+/* Stats List Styling */
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.stats-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(29, 66, 138, 0.1); /* Subtle NBA Blue line */
+    font-size: 0.95rem;
+}
+
+.stats-list li strong {
+    color: var(--nba-blue);
+}
+
+/* Ensure the tracker doesn't have a distracting border */
+.no-border img {
+    border: none !important;
+    box-shadow: none !important;
+}
