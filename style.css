@@ -39,19 +39,6 @@ body {
     padding: 0 20px;
 }
 
-/* --- THE NAVIGATION (Top Green Strip) --- */
-.top-nav {
-    background-color: var(--highlight-green);
-    color: #ffffff;
-    padding: 10px 0;
-    font-weight: 500;
-}
-
-.top-nav .site-title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
 /* --- NBA HERO SECTION --- */
 .galaxy-hero {
@@ -99,8 +86,6 @@ body {
 .bio-text p strong {
     color: var(--nba-red); /* Use Red for name highlights */
 }
-
-/* Links (The "NBA.com" style) */
 a {
     color: var(--nba-blue);
     text-decoration: none;
@@ -207,6 +192,20 @@ a:hover {
 
 .recap-block p { margin-bottom: 1.5rem; }
 
+.stats-divider {
+    background-color: var(--nba-blue);
+    color: white;
+    padding: 15px 0;
+    margin: 50px 0;
+    transform: skewX(-10deg); /* Aggressive sports styling slant */
+}
+
+.stats-divider h3 {
+    transform: skewX(10deg); /* Reverse the slant for the text so it's readable */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
 
 /* RESPONSIVE: Stack sections on mobile */
 @media (max-width: 768px) {
