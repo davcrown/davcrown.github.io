@@ -13,11 +13,23 @@ body {
 }
 
 /* --- THE NEW PALETTE --- */
+/* --- THE NBA PALETTE --- */
 :root {
-    --highlight-green: #37bf3a; /* Main Accent Green */
-    --hover-green: #2fa331; /* Darker hover green */
-    --gray-bg: #f5f5f5; /* Background for text boxes */
-    --caption-gray: #777777; /* For figure captions */
+    --nba-blue: #1D428A;    /* Official NBA Royal Blue */
+    --nba-red: #C8102E;     /* Official NBA Scarlet Red */
+    --nba-white: #FFFFFF;
+    --gray-bg: #f0f2f5;     /* Slightly cooler gray for text boxes */
+    --text-main: #12233c;   /* Deep navy for better readability */
+}
+
+/* --- NAVIGATION (NBA Blue Strip) --- */
+.top-nav {
+    background-color: var(--nba-blue);
+    color: var(--nba-white);
+    padding: 12px 0;
+    border-bottom: 4px solid var(--nba-red); /* Added the red "accent" line */
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* Container used to lock all content width */
@@ -41,30 +53,27 @@ body {
     letter-spacing: 1px;
 }
 
-/* --- GALAXY HERO SECTION --- */
+/* --- NBA HERO SECTION --- */
 .galaxy-hero {
-    /* Replace with your own galaxy background URL */
-    background: url('path-to-your-galaxy-background.jpg') center/cover no-repeat;
-    background-color: #0d1b2a; /* Fallback if image fails */
-    padding: 100px 0;
+    background: linear-gradient(135deg, var(--nba-blue) 0%, #0a1f44 100%);
+    padding: 120px 0;
     text-align: center;
-    color: #ffffff;
+    color: var(--nba-white);
+    border-bottom: 8px solid var(--nba-red);
 }
 
 .galaxy-hero h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Modern outline/shadow */
+    font-size: 3.5rem;
+    font-weight: 900; 
+    color: var(--nba-white);
+    text-shadow: 3px 3px 0px var(--nba-red);
 }
 
 .galaxy-hero h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    margin-top: 10px;
 }
 
 /* --- CONTENT SECTIONS --- */
@@ -78,12 +87,31 @@ body {
     align-items: center;
 }
 
-/* Text explanations (gray boxes) */
+/* Update the Gray Text Boxes */
 .text-explanation {
     background-color: var(--gray-bg);
+    border-left: 5px solid var(--nba-blue); /* Blue accent on the left */
     padding: 30px;
-    border-radius: 8px;
-    color: #555555;
+    border-radius: 4px; /* Sharper corners feel more "Official" */
+}
+
+/* Update Bio Section Highlights */
+.bio-text p strong {
+    color: var(--nba-red); /* Use Red for name highlights */
+}
+
+/* Links (The "NBA.com" style) */
+a {
+    color: var(--nba-blue);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--nba-red);
+    border-bottom: 2px solid var(--nba-red);
 }
 
 .data-block p {
@@ -179,17 +207,6 @@ body {
 
 .recap-block p { margin-bottom: 1.5rem; }
 
-/* Links styling (the specific green links from your image) */
-a {
-    color: var(--highlight-green);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a:hover {
-    color: var(--hover-green);
-    text-decoration: underline;
-}
 
 /* RESPONSIVE: Stack sections on mobile */
 @media (max-width: 768px) {
