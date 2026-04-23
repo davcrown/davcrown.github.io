@@ -79,17 +79,36 @@
     </div>
 </section>
 
-        <section class="data-block split">
-            <div class="viz">
-                <img src="path-to-your-vertical-bar.png" alt="Efficiency vs. Scoring Influence">
-                <p class="caption">The Correlation Between WS and MVP Voting Points</p>
-            </div>
-            <div class="text-explanation">
-                <p>
-                    In this final breakdown, we analyze how different efficiency ratings influence voting. This analysis confirms that while points per game remain critical, a candidate’s True Shooting Percentage (TS%) and assist-to-turnover ratio are now more significant differentiators than raw scoring totals in deciding close MVP races.
-                </p>
-            </div>
-        </section>
+    <section class="data-block-grid">
+    <header class="section-header full-width">
+        <span class="category-tag">Regression Analysis</span>
+        <h2>Predictive Power: Points vs. Win Shares</h2>
+    </header>
+
+    <div class="grid-item">
+        <div class="viz">
+            <img src="PPGEFFECT.png" alt="Impact of Points Per Game on MVP Race">
+        </div>
+        <div class="text-explanation min-height">
+            <h3>Scoring Volume (PPG)</h3>
+            <p>
+                The orange regression line illustrates the "Scoring Floor." While higher PPG correlates with a higher predicted vote share, the wide confidence interval at the 30+ PPG mark suggests that scoring alone is no longer a guaranteed MVP lock in the modern era.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <div class="viz">
+            <img src="wsregressionplot.png" alt="Impact of Winshares on MVP Race">
+        </div>
+        <div class="text-explanation min-height">
+            <h3>Advanced Impact (Win Shares)</h3>
+            <p>
+                In contrast, the Win Shares regression shows a much tighter, more linear correlation. The narrower confidence bands indicate that Win Shares are a more reliable predictor of MVP success, as they capture a player's total contribution to winning rather than just offensive output.
+            </p>
+        </div>
+    </div>
+</section>
 
         <section class="data-block centered">
             <div class="text-explanation">
