@@ -14,12 +14,61 @@ body {
 
 /* --- THE NEW PALETTE --- */
 /* --- THE NBA PALETTE --- */
+/* --- EXPANDED LAYOUT --- */
 :root {
-    --nba-blue: #1D428A;    /* Official NBA Royal Blue */
-    --nba-red: #C8102E;     /* Official NBA Scarlet Red */
+    --nba-blue: #1D428A;
+    --nba-red: #C8102E;
     --nba-white: #FFFFFF;
-    --gray-bg: #f0f2f5;     /* Slightly cooler gray for text boxes */
-    --text-main: #12233c;   /* Deep navy for better readability */
+    --max-width: 1440px; /* Expanded for desktop */
+}
+
+/* Widens the container significantly */
+.main-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Hero Section: Full width with NBA-style thick bottom border */
+.galaxy-hero {
+    width: 100%;
+    background: linear-gradient(135deg, #0a1f44 0%, var(--nba-blue) 100%);
+    padding: 80px 0;
+    border-bottom: 12px solid var(--nba-red);
+}
+
+/* --- THE SIDE-BY-SIDE DASHBOARD GRID --- */
+.data-block.split {
+    display: grid;
+    /* 60% for the visualization, 40% for the text */
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 50px;
+    margin: 80px 0;
+    align-items: start; /* Aligns text box to top of the chart */
+}
+
+/* Force gray boxes to take up the full height of the chart if needed */
+.text-explanation {
+    background-color: #f8f9fa;
+    border-left: 6px solid var(--nba-blue);
+    padding: 40px;
+    font-size: 1.1rem;
+    height: 100%;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Visualization styling */
+.viz img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Centered blocks (like the "Gap" analysis) can now be massive */
+.data-block.centered {
+    max-width: var(--max-width);
+    margin: 100px auto;
 }
 
 /* --- NAVIGATION (NBA Blue Strip) --- */
@@ -32,22 +81,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Container used to lock all content width */
-.main-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
-
-/* --- NBA HERO SECTION --- */
-.galaxy-hero {
-    background: linear-gradient(135deg, var(--nba-blue) 0%, #0a1f44 100%);
-    padding: 120px 0;
-    text-align: center;
-    color: var(--nba-white);
-    border-bottom: 8px solid var(--nba-red);
-}
 
 .galaxy-hero h1 {
     font-family: 'Montserrat', sans-serif;
@@ -74,13 +108,6 @@ body {
     align-items: center;
 }
 
-/* Update the Gray Text Boxes */
-.text-explanation {
-    background-color: var(--gray-bg);
-    border-left: 5px solid var(--nba-blue); /* Blue accent on the left */
-    padding: 30px;
-    border-radius: 4px; /* Sharper corners feel more "Official" */
-}
 
 /* Update Bio Section Highlights */
 .bio-text p strong {
@@ -129,10 +156,6 @@ a:hover {
 
 /* --- LAYOUT VARIANTS --- */
 
-/* VARIANT 1: Split (Viz left, gray text box right) */
-.data-block.split {
-    /* (This is the default block styling above) */
-}
 
 /* VARIANT 2: Centered (Text paragraph center, big viz below) */
 .data-block.centered {
