@@ -302,3 +302,54 @@ a:hover {
 .viz img:hover {
     transform: scale(1.02);
 }
+
+/* --- CONCLUSION SECTION --- */
+.conclusion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 60px auto;
+    max-width: var(--max-width);
+}
+
+.conclusion-card {
+    background: #fff;
+    padding: 30px;
+    border-top: 5px solid var(--nba-blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.conclusion-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    opacity: 0.2; /* Watermark look */
+}
+
+.conclusion-card h4 {
+    color: var(--nba-blue);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.final-statement {
+    text-align: center;
+    padding: 60px 0;
+    background-color: var(--nba-blue);
+    color: white;
+    margin-top: 40px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.final-statement strong {
+    color: var(--nba-red);
+}
