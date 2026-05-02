@@ -86,7 +86,7 @@ body {
 .galaxy-hero h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3.5rem;
-    font-weight: 900; 
+    font-weight: 1000; 
     color: var(--nba-white);
     text-shadow: 3px 3px 0px var(--nba-red);
 }
