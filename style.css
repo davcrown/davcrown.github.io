@@ -156,7 +156,7 @@ a:hover {
 
 .data-block.centered .text-explanation {
     background: transparent;
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto 30px auto;
     color: #333333;
 }
@@ -184,7 +184,7 @@ a:hover {
     margin-top: 50px;
     font-size: 1.1rem;
     color: #333333;
-    max-width: 850px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
