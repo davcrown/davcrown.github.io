@@ -35,7 +35,6 @@ body {
     width: 100%;
     background: linear-gradient(135deg, #0a1f44 0%, var(--nba-blue) 100%);
     border-bottom: 12px solid var(--nba-red);
-    margin-right: auto;
     margin-top: 0px;
 }
 
