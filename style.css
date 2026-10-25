@@ -659,15 +659,9 @@ a:hover {
 /* --- Projects --- */
 .project-feature .viz,
 .project-feature .viz:hover,
-.project-feature .stat-cards,
-.project-feature .stat-cards:hover,
 .project-card,
 .project-card:hover {
     border-bottom: none;
-}
-
-.project-feature .stat-cards {
-    font-weight: 400;
 }
 
 .project-card {
