@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA MVP Synthesis | David Coronado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="main-container nav-inner">
+            <span class="site-title">NBA MVP Synthesis</span>
+            <ul class="nav-links">
+                <li><a href="index.html">&larr; Portfolio</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="galaxy-hero split">
+        <div class="main-container">
+            <h1>SYNTHESIZING THE MVP:</h1>
+            <h2>AN ANALYSIS OF NBA PLAYER PERFORMANCES AND VOTING PATTERNS</h2>
+        </div>
+        <div class="viz">
+            <img src="docs/assets/brunorouby-yahoosports-mvp.jpg" alt="Bruno Rouby - Yahoo Sports MVP Collage" style="max-width: 100%; padding: 20px;">
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="intro-block">
+                <p>
+                    Synthesizing the modern MVP requires analyzing performance metrics against increasing voter standards. While points per game (PPG) remain a basic requirement, true MVP synthesis in 2026 relies on combining advanced efficiency ratings like Player Efficiency Rating (PER) and Win Shares with traditional statistics.
+                </p>
+                <p>
+                    In this study, we break down historical voting data from 1956-2025 to identify the Optimal MVP Profile. We analyze how factors like points per game, player durability (Games Played), and advanced metrics (PER, WS/48) are reflected in the selection process. It is  important to note that from 1956-1980, players voted for the MVP and were not allowed to vote for their teammates. After that, the voting process changed to a panel of sportswriters and broadcasters, which has influenced the criteria for selection. By synthesizing these data points, we aim to predict the 2026 MVP and understand how the evolving landscape of basketball has shaped the award's criteria.
+                </p>
+        </section>
+
+        <header class="stats-divider">
+            <div class="main-container">
+                <h3>Historical Context & The Evolution of Greatness</h3>
+            </div>
+        </header>
+
+        <section class="data-block centered">
+            <header class="section-header">          
+                <h2>The Gap: MVP Voting Shares vs. Trophies Won</h2>
+            </header>
+
+            <div class="viz">
+                <img src="docs/assets/gapmvp.png" alt="MVP Voting Shares Against Awards Won">
+                <p class="caption">Career MVP Award Shares (Gray) vs. Actual MVPs Won (Gold) | Data: 1955-2025</p>
+            </div>
+
+            <div class="text-explanation">
+                <p>
+                    This visualization highlights the discrepancy between consistent elite performance (Voting Shares) and recognized success (Awards Won). 
+                </p>
+                <p>
+                    Notice the significant gray tails for players like Jerry West or Chris Paul, elite candidates who maintained MVP-level production for a decade without the award to show for it. One can easily see how the voting process, influenced by narratives and team success, has historically favored certain players while overlooking others who were consistently excellent but never quite the best in a given season.
+                </p>
+            </div>
+        </section>
+
+        <section class="data-block split">
+            <div class="viz">
+                <img src="docs/assets/65games.png" alt="MVP Games Played Trend">
+                <p class="caption">Games Played by MVP Winners Over Time.</p>
+            </div>
+            <div class="text-explanation">
+                <h3>The 65-Game Requirement</h3>
+                <p>
+                    While historical greats (1965-1995) almost exclusively stayed well above the 65-game mark, the modern era shows a jagged descent. This showcases the changing ideas surrounding player health and the increasing prevalence of load management strategies. 
+                </p>
+                <p>
+                    It appears that the new 65 game requirement for awards was in fact necessary. As teams increasingly focus on keeping players healthy for the playoffs, fans and voters see less and less of them making their candidacy less concrete in the regular season than in the past. This also showcases the constantly changing standards for what it takes to be a great player. Even when competing for a championship, a player should be able to maintain that high level performance for both the regular season and playoffs.
+                </p>
+            </div>
+        </section>
+
+        <section class="data-block centered">
+            <header class="section-header">
+                <h2>The Geographic Distribution of Excellence</h2>
+            </header>
+            <div class="text-explanation">
+                <p>We analyze the geographic distribution of MVP performance. For over 60 years, the MVP award was largely a domestic affair. The clustering near major metropolitan areas illustrates how proximity to top-tier scouting and elite high school programs served as the traditional gateway to the MVP trophy. 
+                   As of 2026, international players have secured seven consecutive MVP awards. This map represents a fundamental shift in the growth of basketball on an international scale.</p>
+            </div>
+            <div class="viz dual-maps">
+                <img src="docs/assets/USAMAP.png" alt="Map 1 - Candidate Team Seeding">
+                <img src="docs/assets/worldmap.png" alt="Map 2 - Defensive Contribution">
+                <p class="caption">Geographic Distribution of MVP Performance Success</p>
+            </div>
+        </section>
+
+        <header class="stats-divider">
+            <div class="main-container">
+                <h3>The Synthesis: Predictive Modeling & Benchmarking</h3>
+            </div>
+        </header>
+
+       <section class="data-block split-reversed">
+    <div class="viz">
+        <img src="docs/assets/scatterplot.png" alt="Scatterplot of PPG vs TS% with MVP Winner Averages">
+        <p class="caption">Past MVPS vs. The Historical MVP Mean (PPG: ~26.4 | TS%: ~60.1%)</p>
+    </div>
+
+    <div class="text-explanation">
+        <header class="section-header">
+            <span class="category-tag">Historical Benchmarking</span>
+            <h2>The MVP Standard: Efficiency vs. Scoring Influence</h2>
+        </header>
+        
+        <p>
+            This scatterplot maps all MVP Winners against the <strong>Historical MVP Baseline</strong>. The intersecting lines here represent the mean performance of every MVP winner from 1955 to 2025. 
+        </p>
+        <p>
+            <strong>The Winner's Circle:</strong> The top-right quadrant represents players who are currently outperforming the "Average MVP" in both scoring volume and efficiency. This Elite-of-the-Elite zone is where the 2025-26 MVP is likely to emerge.
+        </p>
+        <p>
+            By scaling bubble size to <strong>PER (Player Efficiency Rating)</strong>, we can see which candidates aren't just meeting the historical PPG/TS% requirements, but are doing so while maintaining the PER dominance (Avg: ~28.0) which is an all in one metric used to evaluate the success of a player's season. Considering that many of these bubbles are quite similar sizes, it shows the value of a metric like PER in distinguishing between candidates who are close in traditional stats but may have different levels of overall impact on the game.
+        </p>
+    </div>
+</section>
+
+        
+
+        <section class="data-block-grid">
+            <header class="section-header full-width">
+                <span class="category-tag">Regression Analysis</span>
+                <h2>Predictive Power: Points vs. Win Shares</h2>
+            </header>
+
+            <div class="grid-item">
+                <div class="viz">
+                    <img src="docs/assets/PPGEFFECT.png" alt="Impact of Points Per Game on MVP Race">
+                </div>
+                <div class="text-explanation min-height">
+                    <h3>Scoring Volume (PPG)</h3>
+                    <p>
+                        While higher PPG correlates with a higher predicted vote share, the wide confidence interval at the 30+ PPG mark suggests that scoring alone is no longer a guaranteed MVP lock in the modern era.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="viz">
+                    <img src="docs/assets/wsregressionplot.png" alt="Impact of Winshares on MVP Race">
+                </div>
+                <div class="text-explanation min-height">
+                    <h3>Advanced Impact (Win Shares)</h3>
+                    <p>
+                        In contrast, the Win Shares regression shows a much tighter, more linear correlation. The narrower confidence bands indicate that Win Shares are a more reliable predictor of MVP success, as they capture a player's total contribution to winning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-block-grid">
+            <header class="section-header full-width">
+                <span class="category-tag">Live 2025-26 Tracker</span>
+                <h2>Kia MVP Ladder: The Week-by-Week Race</h2>
+            </header>
+
+            <div class="grid-item">
+                <div class="viz no-border">
+                    <img src="docs/assets/mvp_faces_tracker.gif" alt="Animated MVP Ladder Tracker 2025-26">
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="text-explanation">
+                    <h3>Current State of the Race (Week 25)</h3>
+                    <p>
+                        As we hit the final stretch of the 2025-26 season, the race has stabilized into a high-stakes duel. 
+                        <strong>Shai Gilgeous-Alexander</strong> holds the #1 spot, while <strong>Victor Wembanyama</strong> is surging with defensive dominance that defies traditional models.
+                    </p>
+                    <ul class="stats-list">
+                        <li><strong>1. Shai Gilgeous-Alexander:</strong> Consistent #1 for 12+ weeks.</li>
+                        <li><strong>2. Victor Wembanyama:</strong> Massive late-season climb.</li>
+                        <li><strong>3. Nikola Jokić:</strong> Maintaining a triple-double average.</li>
+                        <li><strong>4. Giannis Antetokounmpo:</strong> The foundation of Milwaukee's engine.</li>
+                        <li><strong>5. Luka Dončić:</strong> Leading the league in offensive production.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <header class="stats-divider">
+    <div class="main-container">
+        <h3>Final Synthesis: The 2026 MVP Formula</h3>
+    </div>
+</header>
+
+<section class="data-block conclusion-grid">
+    <div class="conclusion-card">
+        <div class="icon-header" style="color: var(--nba-red);">01</div>
+        <h4>The Mathematical Archetype</h4>
+        <p>
+            The Optimal MVP Profile is no longer just a high-volume scorer. Our regression models prove that <strong>Win Shares</strong> and <strong>PER</strong> have overtaken raw PPG as the primary predictors of voting success. To win in 2026, a player must be an efficiency outlier.
+        </p>
+    </div>
+
+    <div class="conclusion-card">
+        <div class="icon-header" style="color: var(--nba-blue);">02</div>
+        <h4>The Availability Premium</h4>
+        <p>
+            With the strict 65-game threshold, durability has become a binary gatekeeper. Players who can maintain elite performance while navigating the modern load management landscape will have a significant edge. The MVP is morseo now as much about availability as it is about ability.
+        </p>
+    </div>
+
+    <div class="conclusion-card">
+        <div class="icon-header">03</div>
+        <h4>The Global Identity</h4>
+        <p>
+            By mapping birthplaces against career shares, we see that the NBA's elite talent pool is now truly borderless. As the NBA continues to grow, the MVP trophy will increasingly reflect a global standard of excellence rather than a domestic one.
+        </p>
+    </div>
+</section>
+
+<section class="final-statement">
+    <div class="main-container">
+        <p>
+            As the 2025-26 season draws to a close, the synthesis of the MVP has never been more complex. The convergence of advanced metrics, durability requirements, and global talent has created a new paradigm for greatness. 
+        </p>
+    </div>
+</section>
+
+        <section class="data-block bio-section">
+            <div class="viz bio-pic">
+                <img src="docs/assets/David Coronado headshot2.jpg" alt="David Coronado - Rice University Statistics">
+            </div>
+            <div class="text-explanation bio-text">
+                <p><strong>David Coronado</strong> is a Statistics Major at Rice University with a special interest in sports analytics and performance optimization. </p>
+                <p>He maintains this ongoing project exploring data synthesizing and predictive modeling. You can follow <a href="http://github.com/davcrown">this study and others on his profile page</a>, or see his full <a href="index.html">portfolio</a>.</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

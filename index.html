@@ -3,240 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBA MVP Synthesis | David Coronado</title>
+    <title>David Coronado | Sports Analytics & Statistics</title>
+    <meta name="description" content="Portfolio of David Coronado, Sports Analytics and Statistics student at Rice University.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="top-nav">
-        <div class="main-container">
-            <span class="site-title">NBA MVP Synthesis</span>
+        <div class="main-container nav-inner">
+            <a href="#top" class="site-title">David Coronado</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <header class="galaxy-hero split">
+    <header class="galaxy-hero split portfolio-hero" id="top">
         <div class="main-container">
-            <h1>SYNTHESIZING THE MVP:</h1>
-            <h2>AN ANALYSIS OF NBA PLAYER PERFORMANCES AND VOTING PATTERNS</h2>
+            <span class="category-tag light">Rice University &middot; Houston, TX</span>
+            <h1>DAVID CORONADO</h1>
+            <h2>SPORTS ANALYTICS &amp; STATISTICS</h2>
+            <p class="hero-lede">
+                Senior at Rice University combining data science with a passion for sports &mdash; turning game film, tracking data, and box scores into insights coaches and analysts can act on.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-red">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
         </div>
-        <div class="viz">
-            <img src="docs/assets/brunorouby-yahoosports-mvp.jpg" alt="Bruno Rouby - Yahoo Sports MVP Collage" style="max-width: 100%; padding: 20px;">
+        <div class="viz hero-pic">
+            <img src="docs/assets/David Coronado headshot2.jpg" alt="David Coronado headshot">
         </div>
     </header>
 
     <main class="main-container">
 
-        <section class="intro-block">
+        <!-- ABOUT -->
+        <section class="data-block split" id="about">
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">About Me</span>
+                    <h2>Data, Basketball &amp; Community</h2>
+                </header>
                 <p>
-                    Synthesizing the modern MVP requires analyzing performance metrics against increasing voter standards. While points per game (PPG) remain a basic requirement, true MVP synthesis in 2026 relies on combining advanced efficiency ratings like Player Efficiency Rating (PER) and Win Shares with traditional statistics.
+                    I'm a Senior at Rice University studying <strong>Sports Analytics and Statistics</strong>. My goal is to combine data science with my passion for sports, while maintaining civic service throughout my career.
                 </p>
                 <p>
-                    In this study, we break down historical voting data from 1956-2025 to identify the Optimal MVP Profile. We analyze how factors like points per game, player durability (Games Played), and advanced metrics (PER, WS/48) are reflected in the selection process. It is  important to note that from 1956-1980, players voted for the MVP and were not allowed to vote for their teammates. After that, the voting process changed to a panel of sportswriters and broadcasters, which has influenced the criteria for selection. By synthesizing these data points, we aim to predict the 2026 MVP and understand how the evolving landscape of basketball has shaped the award's criteria.
+                    As a <strong>Basketball Analytics Scout at SkillCorner</strong>, I was part of a small team producing high-quality datasets for analytics firms and professional teams. Deciphering the right annotations for in-game events taught me to operate in grey areas, problem-solve toward the goal at hand, and pay close attention to detail.
                 </p>
+                <p>
+                    Today I lead the <strong>Technical Projects</strong> subteam of the Rice Sport Analytics Team, serve as a Lab TA for Rice Statistics, and co-host <em>Against the Grain</em> on KTRU Sports.
+                </p>
+            </div>
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <span class="stat-number">1000s</span>
+                    <span class="stat-label">NCAA, FIBA &amp; NBA games scouted</span>
+                </div>
+                <div class="stat-card red">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Players covered in pre/post-game reports</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">30</span>
+                    <span class="stat-label">Undergraduates taught R as a Lab TA</span>
+                </div>
+                <div class="stat-card red">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Languages &mdash; English &amp; Spanish</span>
+                </div>
+            </div>
         </section>
 
-        <header class="stats-divider">
+        <!-- EXPERIENCE -->
+        <header class="stats-divider" id="experience">
             <div class="main-container">
-                <h3>Historical Context & The Evolution of Greatness</h3>
+                <h3>Experience</h3>
             </div>
         </header>
 
-        <section class="data-block centered">
-            <header class="section-header">          
-                <h2>The Gap: MVP Voting Shares vs. Trophies Won</h2>
-            </header>
+        <section class="timeline">
 
-            <div class="viz">
-                <img src="docs/assets/gapmvp.png" alt="MVP Voting Shares Against Awards Won">
-                <p class="caption">Career MVP Award Shares (Gray) vs. Actual MVPs Won (Gold) | Data: 1955-2025</p>
-            </div>
-
-            <div class="text-explanation">
-                <p>
-                    This visualization highlights the discrepancy between consistent elite performance (Voting Shares) and recognized success (Awards Won). 
-                </p>
-                <p>
-                    Notice the significant gray tails for players like Jerry West or Chris Paul, elite candidates who maintained MVP-level production for a decade without the award to show for it. One can easily see how the voting process, influenced by narratives and team success, has historically favored certain players while overlooking others who were consistently excellent but never quite the best in a given season.
-                </p>
-            </div>
-        </section>
-
-        <section class="data-block split">
-            <div class="viz">
-                <img src="docs/assets/65games.png" alt="MVP Games Played Trend">
-                <p class="caption">Games Played by MVP Winners Over Time.</p>
-            </div>
-            <div class="text-explanation">
-                <h3>The 65-Game Requirement</h3>
-                <p>
-                    While historical greats (1965-1995) almost exclusively stayed well above the 65-game mark, the modern era shows a jagged descent. This showcases the changing ideas surrounding player health and the increasing prevalence of load management strategies. 
-                </p>
-                <p>
-                    It appears that the new 65 game requirement for awards was in fact necessary. As teams increasingly focus on keeping players healthy for the playoffs, fans and voters see less and less of them making their candidacy less concrete in the regular season than in the past. This also showcases the constantly changing standards for what it takes to be a great player. Even when competing for a championship, a player should be able to maintain that high level performance for both the regular season and playoffs.
-                </p>
-            </div>
-        </section>
-
-        <section class="data-block centered">
-            <header class="section-header">
-                <h2>The Geographic Distribution of Excellence</h2>
-            </header>
-            <div class="text-explanation">
-                <p>We analyze the geographic distribution of MVP performance. For over 60 years, the MVP award was largely a domestic affair. The clustering near major metropolitan areas illustrates how proximity to top-tier scouting and elite high school programs served as the traditional gateway to the MVP trophy. 
-                   As of 2026, international players have secured seven consecutive MVP awards. This map represents a fundamental shift in the growth of basketball on an international scale.</p>
-            </div>
-            <div class="viz dual-maps">
-                <img src="docs/assets/USAMAP.png" alt="Map 1 - Candidate Team Seeding">
-                <img src="docs/assets/worldmap.png" alt="Map 2 - Defensive Contribution">
-                <p class="caption">Geographic Distribution of MVP Performance Success</p>
-            </div>
-        </section>
-
-        <header class="stats-divider">
-            <div class="main-container">
-                <h3>The Synthesis: Predictive Modeling & Benchmarking</h3>
-            </div>
-        </header>
-
-       <section class="data-block split-reversed">
-    <div class="viz">
-        <img src="docs/assets/scatterplot.png" alt="Scatterplot of PPG vs TS% with MVP Winner Averages">
-        <p class="caption">Past MVPS vs. The Historical MVP Mean (PPG: ~26.4 | TS%: ~60.1%)</p>
-    </div>
-
-    <div class="text-explanation">
-        <header class="section-header">
-            <span class="category-tag">Historical Benchmarking</span>
-            <h2>The MVP Standard: Efficiency vs. Scoring Influence</h2>
-        </header>
-        
-        <p>
-            This scatterplot maps all MVP Winners against the <strong>Historical MVP Baseline</strong>. The intersecting lines here represent the mean performance of every MVP winner from 1955 to 2025. 
-        </p>
-        <p>
-            <strong>The Winner's Circle:</strong> The top-right quadrant represents players who are currently outperforming the "Average MVP" in both scoring volume and efficiency. This Elite-of-the-Elite zone is where the 2025-26 MVP is likely to emerge.
-        </p>
-        <p>
-            By scaling bubble size to <strong>PER (Player Efficiency Rating)</strong>, we can see which candidates aren't just meeting the historical PPG/TS% requirements, but are doing so while maintaining the PER dominance (Avg: ~28.0) which is an all in one metric used to evaluate the success of a player's season. Considering that many of these bubbles are quite similar sizes, it shows the value of a metric like PER in distinguishing between candidates who are close in traditional stats but may have different levels of overall impact on the game.
-        </p>
-    </div>
-</section>
-
-        
-
-        <section class="data-block-grid">
-            <header class="section-header full-width">
-                <span class="category-tag">Regression Analysis</span>
-                <h2>Predictive Power: Points vs. Win Shares</h2>
-            </header>
-
-            <div class="grid-item">
-                <div class="viz">
-                    <img src="docs/assets/PPGEFFECT.png" alt="Impact of Points Per Game on MVP Race">
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">Aug 2026 &ndash; Present</span>
+                    <span class="timeline-org">Rice University Statistics</span>
                 </div>
-                <div class="text-explanation min-height">
-                    <h3>Scoring Volume (PPG)</h3>
-                    <p>
-                        While higher PPG correlates with a higher predicted vote share, the wide confidence interval at the 30+ PPG mark suggests that scoring alone is no longer a guaranteed MVP lock in the modern era.
-                    </p>
+                <div class="timeline-card">
+                    <h4>Lab TA</h4>
+                    <p>Instruct the lab section of the Probability &amp; Statistics course, teaching 30 undergraduates to use R for statistical problem solving.</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="grid-item">
-                <div class="viz">
-                    <img src="docs/assets/wsregressionplot.png" alt="Impact of Winshares on MVP Race">
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">Sep 2024 &ndash; Present</span>
+                    <span class="timeline-org">Rice Sport Analytics Team</span>
                 </div>
-                <div class="text-explanation min-height">
-                    <h3>Advanced Impact (Win Shares)</h3>
-                    <p>
-                        In contrast, the Win Shares regression shows a much tighter, more linear correlation. The narrower confidence bands indicate that Win Shares are a more reliable predictor of MVP success, as they capture a player's total contribution to winning.
-                    </p>
+                <div class="timeline-card">
+                    <h4>Technical Team Lead <span class="role-date">Mar 2026 &ndash; Present</span></h4>
+                    <p>Lead the Technical Projects subteam within the larger Rice Sport Analytics Team.</p>
+                    <h4>Analyst, Women's Basketball <span class="role-date">Sep 2024 &ndash; Present</span></h4>
+                    <p>Help build scouting and head-to-head reports on upcoming opponents, giving the Rice Women's Basketball coaching staff data-driven insights before games.</p>
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <section class="data-block-grid">
-            <header class="section-header full-width">
-                <span class="category-tag">Live 2025-26 Tracker</span>
-                <h2>Kia MVP Ladder: The Week-by-Week Race</h2>
-            </header>
-
-            <div class="grid-item">
-                <div class="viz no-border">
-                    <img src="docs/assets/mvp_faces_tracker.gif" alt="Animated MVP Ladder Tracker 2025-26">
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">Apr 2026 &ndash; Jul 2026</span>
+                    <span class="timeline-org">John Lucas Enterprises</span>
                 </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="text-explanation">
-                    <h3>Current State of the Race (Week 25)</h3>
-                    <p>
-                        As we hit the final stretch of the 2025-26 season, the race has stabilized into a high-stakes duel. 
-                        <strong>Shai Gilgeous-Alexander</strong> holds the #1 spot, while <strong>Victor Wembanyama</strong> is surging with defensive dominance that defies traditional models.
-                    </p>
+                <div class="timeline-card">
+                    <h4>Basketball Analytics Team Member</h4>
                     <ul class="stats-list">
-                        <li><strong>1. Shai Gilgeous-Alexander:</strong> Consistent #1 for 12+ weeks.</li>
-                        <li><strong>2. Victor Wembanyama:</strong> Massive late-season climb.</li>
-                        <li><strong>3. Nikola Jokić:</strong> Maintaining a triple-double average.</li>
-                        <li><strong>4. Giannis Antetokounmpo:</strong> The foundation of Milwaukee's engine.</li>
-                        <li><strong>5. Luka Dončić:</strong> Leading the league in offensive production.</li>
+                        <li>Developed substantial pre- and post-game reports covering 40+ players.</li>
+                        <li>Identified areas of data collection for automation.</li>
+                        <li>Converted technical insights into easily interpretable visuals for non-technical audiences.</li>
                     </ul>
                 </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">May 2026 &ndash; Jun 2026</span>
+                    <span class="timeline-org">Schmidt College of Medicine, Florida Atlantic University</span>
+                </div>
+                <div class="timeline-card">
+                    <h4>Research Intern</h4>
+                    <ul class="stats-list">
+                        <li>Applied biostatistical and machine learning techniques &mdash; linear/logistic regression, mixed-effects models, spatial statistics, causal inference, and survival analysis &mdash; to complex biomedical and health datasets.</li>
+                        <li>Built automated pipelines in R and SAS for power analysis, predictor selection, visualization, and epidemiological modeling using Electronic Health Records (EHR).</li>
+                        <li>Evaluated study design methodologies, RCTs, and network analysis techniques, culminating in collaborative research presentations to faculty.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">Feb 2025 &ndash; Jan 2026</span>
+                    <span class="timeline-org">SkillCorner</span>
+                </div>
+                <div class="timeline-card">
+                    <h4>Basketball Analytics Scout</h4>
+                    <p>Returned for a second year. Helped develop datasets spanning thousands of NCAA, FIBA, and NBA games &mdash; pristine data fit for the highest level of modeling by high-profile analytics firms and professional teams.</p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">Sep 2024 &ndash; Present</span>
+                    <span class="timeline-org">KTRU Sports</span>
+                </div>
+                <div class="timeline-card">
+                    <h4>Analyst &amp; Co-Host</h4>
+                    <p>Co-host of <em>Against the Grain</em>, Rice University's latest sports talk show, providing analytical insight on and off air while highlighting Rice Athletics and Houston sports.</p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">Feb 2024 &ndash; Apr 2026</span>
+                    <span class="timeline-org">Hanszen College, Rice University</span>
+                </div>
+                <div class="timeline-card">
+                    <h4>Community Facilitator <span class="role-date">Feb 2024 &ndash; Apr 2026</span></h4>
+                    <p>Selected by the Office of Access and Institutional Excellence to support students of all backgrounds. Presented to 100+ new students and advisors during Orientation Week.</p>
+                    <h4>Sophomore Class Representative <span class="role-date">Mar 2024 &ndash; Mar 2025</span></h4>
+                    <p>Elected to represent the needs, grievances, and wishes of my classmates.</p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-date">Jun 2024 &ndash; Aug 2024</span>
+                    <span class="timeline-org">Cafe Izmir</span>
+                </div>
+                <div class="timeline-card">
+                    <h4>Line Cook</h4>
+                    <p>Worked school breaks to support myself through college, sharpening decision-making under pressure while delivering clean, efficient service.</p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- PROJECTS -->
+        <header class="stats-divider" id="projects">
+            <div class="main-container">
+                <h3>Projects</h3>
+            </div>
+        </header>
+
+        <section class="data-block split-reversed project-feature">
+            <a class="viz" href="nba-mvp.html">
+                <img src="docs/assets/scatterplot.png" alt="Scatterplot of MVP winners by PPG and TS%">
+            </a>
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">Featured Study</span>
+                    <h2>Synthesizing the MVP</h2>
+                </header>
+                <p>
+                    An analysis of NBA player performances and voting patterns from 1956&ndash;2025. Using regression on PPG, Win Shares, PER, and games played, the study builds an <strong>Optimal MVP Profile</strong> and tracks the 2025&ndash;26 race week by week.
+                </p>
+                <ul class="tag-list">
+                    <li>Regression</li>
+                    <li>Data Visualization</li>
+                    <li>Geospatial</li>
+                    <li>NBA</li>
+                </ul>
+                <a href="nba-mvp.html" class="btn btn-blue">Read the Study &rarr;</a>
             </div>
         </section>
 
-        <header class="stats-divider">
-    <div class="main-container">
-        <h3>Final Synthesis: The 2026 MVP Formula</h3>
-    </div>
-</header>
-
-<section class="data-block conclusion-grid">
-    <div class="conclusion-card">
-        <div class="icon-header" style="color: var(--nba-red);">01</div>
-        <h4>The Mathematical Archetype</h4>
-        <p>
-            The Optimal MVP Profile is no longer just a high-volume scorer. Our regression models prove that <strong>Win Shares</strong> and <strong>PER</strong> have overtaken raw PPG as the primary predictors of voting success. To win in 2026, a player must be an efficiency outlier.
-        </p>
-    </div>
-
-    <div class="conclusion-card">
-        <div class="icon-header" style="color: var(--nba-blue);">02</div>
-        <h4>The Availability Premium</h4>
-        <p>
-            With the strict 65-game threshold, durability has become a binary gatekeeper. Players who can maintain elite performance while navigating the modern load management landscape will have a significant edge. The MVP is morseo now as much about availability as it is about ability.
-        </p>
-    </div>
-
-    <div class="conclusion-card">
-        <div class="icon-header">03</div>
-        <h4>The Global Identity</h4>
-        <p>
-            By mapping birthplaces against career shares, we see that the NBA's elite talent pool is now truly borderless. As the NBA continues to grow, the MVP trophy will increasingly reflect a global standard of excellence rather than a domestic one.
-        </p>
-    </div>
-</section>
-
-<section class="final-statement">
-    <div class="main-container">
-        <p>
-            As the 2025-26 season draws to a close, the synthesis of the MVP has never been more complex. The convergence of advanced metrics, durability requirements, and global talent has created a new paradigm for greatness. 
-        </p>
-    </div>
-</section>
-
-        <section class="data-block bio-section">
-            <div class="viz bio-pic">
-                <img src="docs/assets/David Coronado headshot2.jpg" alt="David Coronado - Rice University Statistics">
+        <section class="data-block conclusion-grid">
+            <a class="conclusion-card project-card" href="nba-mvp.html">
+                <img src="docs/assets/wsregressionplot.png" alt="Win Shares regression plot">
+                <h4>Win Shares vs. MVP Voting</h4>
+                <p>Why Win Shares are a tighter, more reliable predictor of MVP vote share than raw scoring.</p>
+            </a>
+            <a class="conclusion-card project-card" href="nba-mvp.html">
+                <img src="docs/assets/worldmap.png" alt="World map of MVP birthplaces">
+                <h4>The Global MVP</h4>
+                <p>Mapping MVP performance by birthplace to show the award's shift to a borderless talent pool.</p>
+            </a>
+            <div class="conclusion-card project-card">
+                <div class="icon-header">01</div>
+                <h4>Women's Basketball Scouting</h4>
+                <p>Head-to-head opponent reports for the Rice Women's Basketball coaching staff, built with the Rice Sport Analytics Team.</p>
             </div>
-            <div class="text-explanation bio-text">
-                <p><strong>David Coronado</strong> is a Statistics Major at Rice University with a special interest in sports analytics and performance optimization. </p>
-                <p>He maintains this ongoing project exploring data synthesizing and predictive modeling. You can follow <a href="http://github.com/davcrown">this study and others on his profile page</a>.</p>
+        </section>
+
+        <!-- SKILLS -->
+        <header class="stats-divider" id="skills">
+            <div class="main-container">
+                <h3>Skills &amp; Recognition</h3>
+            </div>
+        </header>
+
+        <section class="data-block conclusion-grid">
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-red);">01</div>
+                <h4>Technical</h4>
+                <ul class="tag-list">
+                    <li>R</li>
+                    <li>SAS</li>
+                    <li>Statistical Modeling</li>
+                    <li>Clinical Study Design</li>
+                    <li>Mixed-Effects Models</li>
+                    <li>Survival Analysis</li>
+                    <li>Causal Inference</li>
+                    <li>Data Visualization</li>
+                </ul>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">02</div>
+                <h4>Education</h4>
+                <ul class="stats-list">
+                    <li><strong>Rice University</strong><br>Sports Analytics &amp; Statistics &middot; 2023 &ndash; 2027</li>
+                    <li><strong>School of Science and Engineering</strong><br>2019 &ndash; 2023</li>
+                </ul>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header">03</div>
+                <h4>Honors &amp; Certifications</h4>
+                <ul class="stats-list">
+                    <li><strong>Hispanic Scholarship Fund</strong> Recipient</li>
+                    <li><strong>AP Scholar</strong> with Distinction</li>
+                    <li><strong>Mark Cuban Foundation</strong> AI Bootcamp (2022)</li>
+                    <li><strong>Languages:</strong> English &amp; Spanish (Native)</li>
+                </ul>
             </div>
         </section>
 
     </main>
+
+    <!-- CONTACT -->
+    <section class="final-statement" id="contact">
+        <div class="main-container">
+            <h3 class="contact-title">Let's Talk Ball &amp; Data</h3>
+            <p>Open to opportunities in sports analytics, data science, and research.</p>
+            <div class="hero-actions centered">
+                <a href="mailto:dac15@rice.edu" class="btn btn-red">dac15@rice.edu</a>
+                <a href="https://www.linkedin.com/in/david-coronado-189642289" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/davcrown" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="main-container">&copy; 2026 David Coronado</div>
+    </footer>
 
 </body>
 </html>
