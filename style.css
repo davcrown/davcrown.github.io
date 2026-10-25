@@ -704,6 +704,60 @@ a:hover {
     margin-top: 0;
 }
 
+/* --- Story, project cards & coursework --- */
+.story-block {
+    background-color: #f8f9fa;
+    border-left: 6px solid var(--nba-red);
+    padding: 40px;
+    margin: 0 0 80px;
+    font-size: 1.1rem;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+}
+
+.story-block p {
+    margin-bottom: 1.2rem;
+}
+
+.story-block p:last-child {
+    margin-bottom: 0;
+}
+
+.project-card .category-tag {
+    display: block;
+}
+
+.card-link {
+    font-weight: 700;
+    color: var(--nba-blue);
+}
+
+.project-card:hover .card-link {
+    color: var(--nba-red);
+}
+
+.coursework-block {
+    margin: 0 0 80px;
+}
+
+.course-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 40px;
+    margin-top: 10px;
+}
+
+.course-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(29, 66, 138, 0.1);
+    font-size: 0.95rem;
+}
+
+.course-list li strong {
+    color: var(--nba-red);
+    margin-right: 8px;
+}
+
 /* --- Project pages --- */
 .hero-stats {
     padding: 20px 40px 20px 0;
@@ -806,6 +860,14 @@ a:hover {
 
     .app-frame iframe {
         min-height: 500px;
+    }
+
+    .story-block {
+        padding: 24px;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
     }
 
     .text-explanation {
