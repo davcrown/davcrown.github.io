@@ -391,9 +391,40 @@ a:hover {
     letter-spacing: 1px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--nba-white);
     border-bottom: 2px solid var(--nba-red);
+}
+
+/* --- Sub-page banner --- */
+.page-hero {
+    background: linear-gradient(135deg, #0a1f44 0%, var(--nba-blue) 100%);
+    border-bottom: 12px solid var(--nba-red);
+    padding: 60px 0 50px;
+    margin-bottom: 60px;
+}
+
+.page-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--nba-white);
+    text-shadow: 3px 3px 0px var(--nba-red);
+}
+
+.conclusion-grid.two-up {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.two-up .project-card img {
+    height: 280px;
+}
+
+.more-link {
+    text-align: center;
+    margin: -20px 0 80px;
 }
 
 /* --- Category tags --- */
@@ -864,6 +895,15 @@ a:hover {
 
     .story-block {
         padding: 24px;
+    }
+
+    .conclusion-grid.two-up {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 40px 0 30px;
+        margin-bottom: 40px;
     }
 
     .course-list {
