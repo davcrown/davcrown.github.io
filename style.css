@@ -305,6 +305,7 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: 60px auto;
+    align-items: stretch;
     max-width: var(--max-width);
 }
 
@@ -736,6 +737,18 @@ a:hover {
 }
 
 /* --- Story, project cards & coursework --- */
+.about-block {
+    margin: 80px 0 60px;
+}
+
+.about-block p {
+    margin-bottom: 1rem;
+}
+
+.about-block p:last-child {
+    margin-bottom: 0;
+}
+
 .story-block {
     background-color: #f8f9fa;
     border-left: 6px solid var(--nba-red);
@@ -787,6 +800,45 @@ a:hover {
 .course-list li strong {
     color: var(--nba-red);
     margin-right: 8px;
+}
+
+.course-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+    margin-top: 20px;
+}
+
+.course-groups h4 {
+    color: var(--nba-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.course-groups .course-list {
+    grid-template-columns: 1fr;
+}
+
+.gpa {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--nba-red);
+    letter-spacing: 1px;
+}
+
+.in-progress {
+    display: inline-block;
+    background: var(--nba-red);
+    color: var(--nba-white);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 8px;
+    margin-left: 6px;
+    border-radius: 2px;
+    vertical-align: middle;
 }
 
 /* --- Project pages --- */
@@ -906,7 +958,8 @@ a:hover {
         margin-bottom: 40px;
     }
 
-    .course-list {
+    .course-list,
+    .course-groups {
         grid-template-columns: 1fr;
     }
 
