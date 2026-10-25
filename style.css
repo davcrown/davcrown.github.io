@@ -659,9 +659,15 @@ a:hover {
 /* --- Projects --- */
 .project-feature .viz,
 .project-feature .viz:hover,
+.project-feature .stat-cards,
+.project-feature .stat-cards:hover,
 .project-card,
 .project-card:hover {
     border-bottom: none;
+}
+
+.project-feature .stat-cards {
+    font-weight: 400;
 }
 
 .project-card {
@@ -701,6 +707,34 @@ a:hover {
 }
 
 .conclusion-card .stats-list {
+    margin-top: 0;
+}
+
+/* --- Project pages --- */
+.hero-stats {
+    padding: 20px 40px 20px 0;
+}
+
+.app-embed {
+    margin: 60px 0 80px;
+}
+
+.app-frame {
+    border: 1px solid #ddd;
+    border-top: 6px solid var(--nba-blue);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: #f8f9fa;
+}
+
+.app-frame iframe {
+    display: block;
+    width: 100%;
+    height: 85vh;
+    min-height: 600px;
+    border: none;
+}
+
+.feature-grid {
     margin-top: 0;
 }
 
@@ -770,6 +804,14 @@ a:hover {
 
     .hero-pic img {
         max-width: 200px;
+    }
+
+    .hero-stats {
+        padding: 0 20px 20px;
+    }
+
+    .app-frame iframe {
+        min-height: 500px;
     }
 
     .text-explanation {

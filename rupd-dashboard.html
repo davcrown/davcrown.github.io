@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUPD Crime Log Dashboard | David Coronado</title>
+    <meta name="description" content="A privacy-conscious R Shiny dashboard of the Rice University Police Department daily crime log, built for DSCI 305 Data Ethics.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="main-container nav-inner">
+            <span class="site-title">RUPD Crime Log Dashboard</span>
+            <ul class="nav-links">
+                <li><a href="index.html">&larr; Portfolio</a></li>
+                <li><a href="#app">Live App</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#ethics">Ethics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="galaxy-hero split portfolio-hero">
+        <div class="main-container">
+            <span class="category-tag light">DSCI 305 &middot; Data Ethics &middot; R Shiny</span>
+            <h1>CAMPUS SAFETY, IN THE OPEN</h1>
+            <h2>A PRIVACY-CONSCIOUS DASHBOARD OF THE RICE UNIVERSITY POLICE DEPARTMENT DAILY CRIME LOG</h2>
+            <p class="hero-lede">
+                An interactive way for students to see what is reported on campus &mdash; which charges, where, and when &mdash; designed around the NIST AI Risk Management Framework so the people behind each record stay protected.
+            </p>
+            <div class="hero-actions">
+                <a href="https://dacrown.shinyapps.io/ethicsdashboard/" class="btn btn-red" target="_blank" rel="noopener">Open the Dashboard</a>
+                <a href="#ethics" class="btn btn-outline">Ethics &amp; Limitations</a>
+            </div>
+        </div>
+        <div class="stat-cards hero-stats">
+            <div class="stat-card">
+                <span class="stat-number">179</span>
+                <span class="stat-label">Charges across two semesters</span>
+            </div>
+            <div class="stat-card red">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Interactive analysis tabs</span>
+            </div>
+            <div class="stat-card red">
+                <span class="stat-number">87</span>
+                <span class="stat-label">Spring 2026 charges (Mar &ndash; Apr)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">92</span>
+                <span class="stat-label">Fall 2026 charges (Aug 11 &ndash; Oct 18)</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- OVERVIEW -->
+        <section class="intro-block">
+            <p>
+                The Rice University Police Department publishes a daily crime log, as required by the <strong>Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act</strong>. The log is public, but as a raw table it is hard to read. This dashboard turns it into something students can explore, so they know what is happening on campus. I was surprised myself by the variety of charges and how often they appear.
+            </p>
+            <p>
+                The data covers <strong>Spring 2026</strong> (March &ndash; April, 87 charges) and <strong>Fall 2026</strong> (August 11 &ndash; October 18, 92 charges). Cases with several charges are split into one row per charge, and a header line in the app shows how recent the data is and links back to the <a href="https://rupdadmin.rice.edu/crimelog/unskinned/" target="_blank" rel="noopener">RUPD source</a>. I couldn't find data from earlier years, but I plan to keep maintaining the project as new semesters are logged.
+            </p>
+        </section>
+
+        <!-- LIVE APP -->
+        <header class="stats-divider" id="app">
+            <div class="main-container">
+                <h3>The Live Dashboard</h3>
+            </div>
+        </header>
+
+        <section class="app-embed">
+            <div class="app-frame">
+                <iframe src="https://dacrown.shinyapps.io/ethicsdashboard/" title="RUPD Crime Log Dashboard" loading="lazy"></iframe>
+            </div>
+            <p class="caption">
+                Hosted on shinyapps.io &mdash; it can take a few seconds to wake up.
+                <a href="https://dacrown.shinyapps.io/ethicsdashboard/" target="_blank" rel="noopener">Open it in a new tab</a> for the full-screen experience.
+            </p>
+        </section>
+
+        <!-- FEATURES -->
+        <header class="stats-divider" id="features">
+            <div class="main-container">
+                <h3>What the Dashboard Does</h3>
+            </div>
+        </header>
+
+        <section class="data-block split">
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">One Control, Every Tab</span>
+                    <h2>Semester Picker</h2>
+                </header>
+                <p>
+                    A picker at the top switches between <strong>Spring 2026</strong>, <strong>Fall 2026</strong>, or <strong>All Semesters</strong>, and every tab follows it &mdash; maps, charts, the written summaries, and the date ranges in the ethics section all update together.
+                </p>
+            </div>
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">Fair Comparisons</span>
+                    <h2>Per-Week Rates</h2>
+                </header>
+                <p>
+                    The two semesters cover different lengths of time, so comparisons use <strong>charges per week</strong> rather than raw totals. That keeps a longer semester from looking more dangerous simply because it has more days in it.
+                </p>
+            </div>
+        </section>
+
+        <section class="data-block conclusion-grid feature-grid">
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-red);">01</div>
+                <h4>Incident Map</h4>
+                <p>Circles sized by the number of records at each campus location. Off-campus and unknown-location records aren't mapped; a note gives their count. The purpose statement and the data ethics section sit right below the map.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">02</div>
+                <h4>Charge &amp; Location Analysis</h4>
+                <p>Filter by location category &mdash; residential colleges, other on campus, off campus &mdash; and by charge type, with select all and clear all. Bar charts show charges by location and by type.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header">03</div>
+                <h4>Temporal Trends</h4>
+                <p>Charges by hour of day, using time reported or time occurred (only when RUPD gives a window of 2 hours or less). A generated sentence names the busiest 3-hour window and warns when there are too few records. A weekly chart sits below.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-red);">04</div>
+                <h4>Semester Comparison</h4>
+                <p>Charges per week by semester for the 8 most common charge types, plus &ldquo;All other charges,&rdquo; so the two semesters can be compared side by side.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">05</div>
+                <h4>Incident Table</h4>
+                <p>One row per case: date, time, charges, location, category, when it occurred, disposition, and case number. Searchable by column, sortable, and shown 25 rows per page.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header">06</div>
+                <h4>Case Outcomes</h4>
+                <p>A bar chart of RUPD dispositions, paired with a plain-language explanation of what the common statuses mean.</p>
+            </div>
+        </section>
+
+        <!-- ETHICS -->
+        <header class="stats-divider" id="ethics">
+            <div class="main-container">
+                <h3>Data Ethics: Building to the NIST AI RMF</h3>
+            </div>
+        </header>
+
+        <section class="data-block split">
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">The Core Risk</span>
+                    <h2>Public Data Can Still Identify People</h2>
+                </header>
+                <p>
+                    The main concern was <strong>privacy</strong>. The crime log is specific enough that someone close to Rice could combine a location, a charge type, and a time and work out who was involved &mdash; then tie it to other events. That creates a real opportunity for bad actors to harm the victims of past incidents.
+                </p>
+                <p>
+                    Every design decision below was made to keep the dashboard useful for awareness without making it a tool for identifying anyone.
+                </p>
+            </div>
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">Measures 2.10 &amp; 2.11</span>
+                    <h2>Privacy &amp; Fairness</h2>
+                </header>
+                <ul class="stats-list">
+                    <li><strong>Jittered locations:</strong> on-campus points are offset on the map, so it can't pinpoint exactly where an incident happened or brand specific spots as places to avoid.</li>
+                    <li><strong>Time reported by default:</strong> it was more complete than the start-time field, didn't differ much from it, and adds a layer of anonymity about the exact situation.</li>
+                    <li><strong>Narrow windows only:</strong> &ldquo;time occurred&rdquo; is used only when RUPD's window is 2 hours or less.</li>
+                    <li><strong>Small-sample warnings:</strong> the app says when there are too few records to draw conclusions.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="data-block conclusion-grid">
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-red);">01</div>
+                <h4>Purpose &amp; Legality</h4>
+                <p>The data is publicly available under the Clery Act, and the dashboard serves a clear purpose: keeping students informed about incidents on campus. On that basis it meets the framework's remaining relevant measures.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">02</div>
+                <h4>Location Accuracy</h4>
+                <p>Coordinates were built from Gemini, OpenStreetMap, and Rice campus maps. Many locations have no street address, so some points are inaccurate &mdash; and the app says so openly.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header">03</div>
+                <h4>Transparency In-App</h4>
+                <p>A data ethics and limitations section lives under the map, explaining the source, how time is approximated, and what the data can't tell you, with date ranges that update with the data.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="final-statement">
+        <div class="main-container">
+            <h3 class="contact-title">Explore the Data</h3>
+            <p>Public data, presented responsibly &mdash; awareness without exposure.</p>
+            <div class="hero-actions centered">
+                <a href="https://dacrown.shinyapps.io/ethicsdashboard/" class="btn btn-red" target="_blank" rel="noopener">Open the Dashboard</a>
+                <a href="https://rupdadmin.rice.edu/crimelog/unskinned/" class="btn btn-outline" target="_blank" rel="noopener">RUPD Crime Log</a>
+                <a href="index.html#projects" class="btn btn-outline">More Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="main-container">&copy; 2026 David Coronado</div>
+    </footer>
+
+</body>
+</html>
