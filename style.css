@@ -886,6 +886,68 @@ a:hover {
     margin: 40px 0 0;
 }
 
+.shot {
+    margin: 0 0 16px;
+}
+
+.shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.shot-link,
+.shot-link:hover {
+    border-bottom: none;
+}
+
+.shot-link img {
+    cursor: zoom-in;
+}
+
+.shot figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--caption-gray);
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.gate-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 0 0 80px;
+}
+
+.ba-label {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--nba-blue);
+    color: var(--nba-white);
+    padding: 1px 8px;
+    border-radius: 2px;
+    margin-right: 6px;
+}
+
+.ba-label.after {
+    background: var(--nba-red);
+}
+
 .conclusion-card p + .stats-list {
     margin-top: 12px;
 }
@@ -1027,7 +1089,8 @@ a:hover {
 
     .conclusion-grid.two-up,
     .conclusion-grid.four-up,
-    .gate-block {
+    .gate-block,
+    .before-after {
         grid-template-columns: 1fr;
     }
 
