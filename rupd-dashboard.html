@@ -18,6 +18,7 @@
                 <li><a href="#app">Live App</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#ethics">Ethics</a></li>
+                <li><a href="#data">Data</a></li>
             </ul>
         </div>
     </nav>
@@ -37,20 +38,20 @@
         </div>
         <div class="stat-cards hero-stats">
             <div class="stat-card">
-                <span class="stat-number">179</span>
-                <span class="stat-label">Charges across two semesters</span>
+                <span class="stat-number">32</span>
+                <span class="stat-label">Semesters, Spring 2015 &ndash; Fall 2026</span>
             </div>
             <div class="stat-card red">
-                <span class="stat-number">6</span>
-                <span class="stat-label">Interactive analysis tabs</span>
+                <span class="stat-number">3,167</span>
+                <span class="stat-label">Cases from the RUPD daily crime log</span>
             </div>
             <div class="stat-card red">
-                <span class="stat-number">87</span>
-                <span class="stat-label">Spring 2026 charges (Mar &ndash; Apr)</span>
+                <span class="stat-number">3,450</span>
+                <span class="stat-label">Individual charges</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number">92</span>
-                <span class="stat-label">Fall 2026 charges (Aug 11 &ndash; Oct 18)</span>
+                <span class="stat-number">91</span>
+                <span class="stat-label">Archived log copies recovered</span>
             </div>
         </div>
     </header>
@@ -63,7 +64,7 @@
                 The Rice University Police Department publishes a daily crime log, as required by the <strong>Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act</strong>. The log is public, but as a raw table it is hard to read. This dashboard turns it into something students can explore, so they know what is happening on campus. I was surprised myself by the variety of charges and how often they appear.
             </p>
             <p>
-                The data covers <strong>Spring 2026</strong> (March &ndash; April, 87 charges) and <strong>Fall 2026</strong> (August 11 &ndash; October 18, 92 charges). Cases with several charges are split into one row per charge, and a header line in the app shows how recent the data is and links back to the <a href="https://rupdadmin.rice.edu/crimelog/unskinned/" target="_blank" rel="noopener">RUPD source</a>. I couldn't find data from earlier years, but I plan to keep maintaining the project as new semesters are logged.
+                The data now spans <strong>32 semesters, from Spring 2015 to Fall 2026</strong>: <strong>3,167 cases</strong> and <strong>3,450 charges</strong>. The live <a href="https://rupdadmin.rice.edu/crimelog/unskinned/" target="_blank" rel="noopener">RUPD log</a> only shows recent entries, so older semesters were recovered from <strong>Internet Archive</strong> copies of the page, and the app reports how much of each semester those copies cover.
             </p>
         </section>
 
@@ -94,54 +95,67 @@
         <section class="data-block split">
             <div class="text-explanation">
                 <header class="section-header">
-                    <span class="category-tag">One Control, Every Tab</span>
-                    <h2>Semester Picker</h2>
+                    <span class="category-tag">One Sidebar, Every Tab</span>
+                    <h2>Shared Filters</h2>
                 </header>
-                <p>
-                    A picker at the top switches between <strong>Spring 2026</strong>, <strong>Fall 2026</strong>, or <strong>All Semesters</strong>, and every tab follows it &mdash; maps, charts, the written summaries, and the date ranges in the ethics section all update together.
-                </p>
+                <ul class="stats-list">
+                    <li><strong>Semester:</strong> pick one of the 32 semesters, or all of them.</li>
+                    <li><strong>Detail level:</strong> show charts by broad groups or by individual charges and locations.</li>
+                    <li><strong>Filters:</strong> location category, 10 location groups, 12 charge groups, or individual charge types.</li>
+                    <li><strong>Reset &amp; summary:</strong> one button clears everything, and a live summary says exactly what's on screen.</li>
+                </ul>
             </div>
             <div class="text-explanation">
                 <header class="section-header">
                     <span class="category-tag">Fair Comparisons</span>
-                    <h2>Per-Week Rates</h2>
+                    <h2>Per-Covered-Week Rates</h2>
                 </header>
                 <p>
-                    The two semesters cover different lengths of time, so comparisons use <strong>charges per week</strong> rather than raw totals. That keeps a longer semester from looking more dangerous simply because it has more days in it.
+                    Semesters differ in length, and archived copies don't capture every week of older semesters. Comparisons therefore use <strong>charges per covered week</strong> instead of raw totals, so a semester doesn't look safer or more dangerous just because more or less of it was recorded.
                 </p>
             </div>
         </section>
 
-        <section class="data-block conclusion-grid feature-grid">
+        <section class="data-block conclusion-grid feature-grid four-up">
             <div class="conclusion-card">
                 <div class="icon-header" style="color: var(--nba-red);">01</div>
                 <h4>Incident Map</h4>
-                <p>Circles sized by the number of records at each campus location. Off-campus and unknown-location records aren't mapped; a note gives their count. The purpose statement and the data ethics section sit right below the map.</p>
+                <p>Opens on campus, with circles colored by location group and sized by count. Click a circle to see its charge breakdown.</p>
             </div>
             <div class="conclusion-card">
                 <div class="icon-header" style="color: var(--nba-blue);">02</div>
                 <h4>Charge &amp; Location Analysis</h4>
-                <p>Filter by location category &mdash; residential colleges, other on campus, off campus &mdash; and by charge type, with select all and clear all. Bar charts show charges by location and by type.</p>
+                <p>Charges by location and by type, plus a grid showing which kinds of charge happen where.</p>
             </div>
             <div class="conclusion-card">
                 <div class="icon-header">03</div>
                 <h4>Temporal Trends</h4>
-                <p>Charges by hour of day, using time reported or time occurred (only when RUPD gives a window of 2 hours or less). A generated sentence names the busiest 3-hour window and warns when there are too few records. A weekly chart sits below.</p>
+                <p>Charges by hour of day, by time reported or time occurred, with the busiest 3-hour window named, and charges per week or month.</p>
             </div>
             <div class="conclusion-card">
                 <div class="icon-header" style="color: var(--nba-red);">04</div>
                 <h4>Semester Comparison</h4>
-                <p>Charges per week by semester for the 8 most common charge types, plus &ldquo;All other charges,&rdquo; so the two semesters can be compared side by side.</p>
+                <p>Charges per covered week across all semesters, and a side-by-side comparison of up to 4 semesters.</p>
             </div>
             <div class="conclusion-card">
                 <div class="icon-header" style="color: var(--nba-blue);">05</div>
                 <h4>Incident Table</h4>
-                <p>One row per case: date, time, charges, location, category, when it occurred, disposition, and case number. Searchable by column, sortable, and shown 25 rows per page.</p>
+                <p>One searchable, sortable row per case.</p>
             </div>
             <div class="conclusion-card">
                 <div class="icon-header">06</div>
                 <h4>Case Outcomes</h4>
-                <p>A bar chart of RUPD dispositions, paired with a plain-language explanation of what the common statuses mean.</p>
+                <p>Cleaned RUPD dispositions, shown as 9 broad outcomes or 15 detailed ones.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-red);">07</div>
+                <h4>About</h4>
+                <p>The dashboard's purpose, along with its data ethics and limitations.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">08</div>
+                <h4>Sources</h4>
+                <p>Every data source, links to all 91 archived copies, and how much of each semester is covered.</p>
             </div>
         </section>
 
@@ -193,7 +207,37 @@
             <div class="conclusion-card">
                 <div class="icon-header">03</div>
                 <h4>Transparency In-App</h4>
-                <p>A data ethics and limitations section lives under the map, explaining the source, how time is approximated, and what the data can't tell you, with date ranges that update with the data.</p>
+                <p>Dedicated About and Sources tabs explain the purpose, how time is approximated, and what the data can't tell you, and they show how complete each semester's archived record is, so gaps are never hidden.</p>
+            </div>
+        </section>
+
+        <!-- MAINTENANCE -->
+        <header class="stats-divider" id="data">
+            <div class="main-container">
+                <h3>Data Pipeline &amp; Maintenance</h3>
+            </div>
+        </header>
+
+        <section class="data-block split">
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">Recovering History</span>
+                    <h2>Eleven Years from the Archive</h2>
+                </header>
+                <p>
+                    The first version covered only two semesters, because the live log shows only recent entries. Older semesters were rebuilt from <strong>91 Internet Archive copies</strong> of the RUPD log, taking the dashboard back to <strong>Spring 2015</strong>. Archived copies don't capture every day, so the Sources tab reports each semester's coverage rather than treating the record as complete.
+                </p>
+            </div>
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">Keeping It Current</span>
+                    <h2><code>update_data.R</code></h2>
+                </header>
+                <ul class="stats-list">
+                    <li><strong>Scrapes the live log</strong> to add new cases as RUPD posts them.</li>
+                    <li><strong>Backfills from the Internet Archive</strong> to fill in older semesters.</li>
+                    <li><strong>Flags new names:</strong> when the app starts, it flags any charge or location name that doesn't fit a group yet, so it gets categorized instead of being silently dropped.</li>
+                </ul>
             </div>
         </section>
 

@@ -869,6 +869,21 @@ a:hover {
     margin-top: 0;
 }
 
+.conclusion-grid.four-up {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section-header h2 code {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+@media (max-width: 1200px) {
+    .conclusion-grid.four-up {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* --- Contact & footer --- */
 .contact-title {
     font-family: 'Montserrat', sans-serif;
@@ -949,7 +964,8 @@ a:hover {
         padding: 24px;
     }
 
-    .conclusion-grid.two-up {
+    .conclusion-grid.two-up,
+    .conclusion-grid.four-up {
         grid-template-columns: 1fr;
     }
 
