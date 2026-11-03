@@ -916,6 +916,10 @@ a:hover {
     line-height: 1.4;
 }
 
+.funnel-figure {
+    margin: 40px 0 0;
+}
+
 .gate-visual {
     display: flex;
     flex-direction: column;
@@ -925,8 +929,9 @@ a:hover {
 .before-after {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin: 0 0 80px;
+    gap: 24px;
+    max-width: 760px;
+    margin: 0 auto 80px;
 }
 
 .ba-label {
