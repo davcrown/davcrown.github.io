@@ -423,6 +423,10 @@ a:hover {
     height: 280px;
 }
 
+.stats-divider.first-divider {
+    margin-top: 0;
+}
+
 .more-link {
     text-align: center;
     margin: -20px 0 80px;
@@ -818,6 +822,11 @@ a:hover {
 
 .course-groups .course-list {
     grid-template-columns: 1fr;
+}
+
+.school-location {
+    font-size: 0.85rem;
+    color: var(--caption-gray);
 }
 
 .gpa {

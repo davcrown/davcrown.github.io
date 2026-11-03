@@ -28,11 +28,17 @@
         <div class="main-container">
             <span class="category-tag light">Projects</span>
             <h1>SELECTED WORK</h1>
-            <p class="hero-lede">Studies, dashboards, reports, and scouting work &mdash; from the MVP race to campus data ethics.</p>
+            <p class="hero-lede">Hackathon wins, dashboards, studies, and scouting work &mdash; from rights compliance for pro clubs to campus data ethics and the MVP race.</p>
         </div>
     </header>
 
     <main class="main-container">
+
+        <header class="stats-divider first-divider">
+            <div class="main-container">
+                <h3>Featured Projects</h3>
+            </div>
+        </header>
 
         <section class="data-block split-reversed project-feature">
             <a class="viz" href="spurs2-hackathon.html">
@@ -44,12 +50,13 @@
                     <h2>Can We Use This Clip?</h2>
                 </header>
                 <p>
-                    The winning submission at the Spurs² Hackathon at UT Austin, hosted by ScorePlay and TwelveLabs with Tottenham Hotspur and the San Antonio Spurs. My team of five built a rights and compliance engine that checks every clip against each partner's terms. I built the <strong>ScorePlay write-back</strong>: a clearance tag per rule sheet on every clip and timecoded evidence logs on videos. Partners' access is gated on those tags, so they see only what's cleared.
+                    The winning submission at the Spurs² Hackathon at UT Austin, hosted by ScorePlay and TwelveLabs with Tottenham Hotspur and the San Antonio Spurs. My team of five built a rights and compliance engine that checks every clip against each partner's terms. I built the <strong>ScorePlay write-back</strong>: a clearance tag per rule sheet on every clip and timecoded evidence logs on videos. Partners' access is gated on those tags, so they see only what's cleared. I also built a contract parser that turns rights agreements into machine-checkable rules.
                 </p>
                 <ul class="tag-list">
                     <li>Python</li>
                     <li>ScorePlay API</li>
                     <li>TwelveLabs</li>
+                    <li>Claude Tool Use</li>
                     <li>Video Understanding</li>
                     <li>Rights &amp; Compliance</li>
                 </ul>
@@ -101,23 +108,43 @@
             </div>
         </section>
 
-        <section class="data-block conclusion-grid">
-            <a class="conclusion-card project-card" href="nba-mvp.html">
-                <img src="docs/assets/wsregressionplot.png" alt="Win Shares regression plot">
-                <h4>Win Shares vs. MVP Voting</h4>
-                <p>Why Win Shares are a tighter, more reliable predictor of MVP vote share than raw scoring.</p>
+        <header class="stats-divider">
+            <div class="main-container">
+                <h3>Competitions</h3>
+            </div>
+        </header>
+
+        <section class="data-block conclusion-grid two-up">
+            <a class="conclusion-card project-card" href="spurs2-hackathon.html">
+                <div class="icon-header" style="color: var(--nba-red);">1st</div>
+                <span class="category-tag">October 2026 &middot; UT Austin</span>
+                <h4>Spurs² Hackathon &mdash; Winner</h4>
+                <p>Two days, a team of five, and a rights and compliance engine for Tottenham Hotspur and the San Antonio Spurs, built with ScorePlay and TwelveLabs. My track was the ScorePlay write-back.</p>
+                <ul class="tag-list">
+                    <li>Python</li>
+                    <li>ScorePlay API</li>
+                    <li>TwelveLabs</li>
+                </ul>
+                <span class="card-link">See the project &rarr;</span>
             </a>
-            <a class="conclusion-card project-card" href="nba-mvp.html">
-                <img src="docs/assets/worldmap.png" alt="World map of MVP birthplaces">
-                <h4>The Global MVP</h4>
-                <p>Mapping MVP performance by birthplace to show the award's shift to a borderless talent pool.</p>
-            </a>
-            <a class="conclusion-card project-card" href="rupd-dashboard.html">
-                <img src="docs/assets/dashboardss.png" alt="Incident Map from the RUPD Crime Log Dashboard">
-                <h4>Privacy-First Campus Map</h4>
-                <p>How jittered locations and reporting-time data keep the RUPD dashboard informative without identifying anyone.</p>
-            </a>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">2nd</div>
+                <span class="category-tag">February 2025</span>
+                <h4>Neurotech Datathon &mdash; 2nd in Track</h4>
+                <p>A data science competition on EEG brain-signal data. With three teammates, I built a statistically rigorous model in 36 hours and placed second in our track.</p>
+                <ul class="tag-list">
+                    <li>EEG Data</li>
+                    <li>Statistical Modeling</li>
+                    <li>36-Hour Build</li>
+                </ul>
+            </div>
         </section>
+
+        <header class="stats-divider">
+            <div class="main-container">
+                <h3>Reports, Scouting &amp; Broadcasting</h3>
+            </div>
+        </header>
 
         <section class="data-block conclusion-grid">
             <a class="conclusion-card project-card" href="https://drive.google.com/drive/folders/1zocoBXGDtLg1zED_awcZ02_U9Vy0BcdD?usp=drive_link" target="_blank" rel="noopener">
