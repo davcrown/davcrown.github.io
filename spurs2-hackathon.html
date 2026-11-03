@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spurs² Hackathon | David Coronado</title>
+    <meta name="description" content="Winning submission at the Spurs² Hackathon: a rights and compliance engine that tells clubs whether a clip can be used, built on TwelveLabs and ScorePlay.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="main-container nav-inner">
+            <span class="site-title">Spurs² Hackathon</span>
+            <ul class="nav-links">
+                <li><a href="index.html">&larr; Portfolio</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#built">What We Built</a></li>
+                <li><a href="#scoreplay">My Contribution</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="galaxy-hero split portfolio-hero">
+        <div class="main-container">
+            <span class="category-tag light">Winner &middot; Spurs² Hackathon &middot; UT Austin &middot; Oct 22&ndash;23, 2026</span>
+            <h1>CAN WE USE THIS CLIP?</h1>
+            <h2>A RIGHTS &amp; COMPLIANCE ENGINE FOR SPORTS CONTENT</h2>
+            <p class="hero-lede">
+                Hosted by <strong>ScorePlay</strong> and <strong>TwelveLabs</strong> alongside <strong>Tottenham Hotspur</strong> and the <strong>San Antonio Spurs</strong>. In two days, my team of five built the winning submission: a system that checks every photo and video against each partner's terms and shows partners only what they're cleared to use. I built the <strong>ScorePlay write-back</strong>, which puts every verdict onto the clip itself.
+            </p>
+            <div class="hero-actions">
+                <a href="#scoreplay" class="btn btn-red">My Contribution</a>
+                <a href="https://github.com/jv92admin/spurs2-hackathon" class="btn btn-outline" target="_blank" rel="noopener">View the Code</a>
+            </div>
+        </div>
+        <div class="viz hero-photo">
+            <img src="docs/assets/spurs2-hackathon.jpg" alt="David Coronado and a teammate working at laptops during the Spurs² Hackathon">
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- PROBLEM -->
+        <header class="stats-divider" id="problem">
+            <div class="main-container">
+                <h3>The Problem</h3>
+            </div>
+        </header>
+
+        <section class="data-block split">
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">The Content Manager's Question</span>
+                    <h2>For this partner, in this country, on this platform, today?</h2>
+                </header>
+                <p>
+                    A club's media library holds thousands of photos and clips, and every one has to be checked against each sponsor, league, and platform agreement. One dressing-room photo can be fine for the Premier League and YouTube UK, need review for Nike, and be blocked for AIA.
+                </p>
+                <p>
+                    Every time something changes, the content manager has to answer that question again. At the event, the library was <strong>83% photos</strong>, and ScorePlay hadn't tagged a single Premier League sponsor (0 of 476 clips), so spotting brands in the footage was up to us.
+                </p>
+            </div>
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">When It Comes Up</span>
+                    <h2>Three Moments</h2>
+                </header>
+                <ul class="stats-list">
+                    <li><strong>A partner signs:</strong> check the whole library against their terms.</li>
+                    <li><strong>A rule changes:</strong> recheck everything already cleared. A partner today may not be one tomorrow.</li>
+                    <li><strong>A partner logs in:</strong> they should see only what's cleared, right in ScorePlay, with no extra system to run.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- WHAT WE BUILT -->
+        <header class="stats-divider" id="built">
+            <div class="main-container">
+                <h3>What We Built</h3>
+            </div>
+        </header>
+
+        <section class="intro-block">
+            <p>
+                Our thesis: <strong>TwelveLabs sees it, the rules decide it, ScorePlay keeps it.</strong> We read every rule we could find and asked of each one: <strong>what evidence would settle this?</strong> Hundreds of clauses turned out to be asking the same seven questions: who's in it, which brands, for how long, what's said, where it's from, where it's going, and what's signed. We reduced them to a small set of facts that <strong>TwelveLabs</strong> can observe in the footage. A rules engine then turns those facts into a verdict for every clip and every rule sheet: <strong>yes</strong>, <strong>review</strong>, or <strong>no</strong>.
+            </p>
+        </section>
+
+        <section class="stat-cards four-stats">
+            <div class="stat-card">
+                <span class="stat-number">109</span>
+                <span class="stat-label">Sources read: 9 agreements, 72 public rules, 28 organizer questions</span>
+            </div>
+            <div class="stat-card red">
+                <span class="stat-number">~330</span>
+                <span class="stat-label">Requirements, each tied to its clause</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">15 + 4</span>
+                <span class="stat-label">Observed types and clip facts the rules read</span>
+            </div>
+            <div class="stat-card red">
+                <span class="stat-number">183</span>
+                <span class="stat-label">Rules across 8 rule sheets in one engine</span>
+            </div>
+        </section>
+
+        <section class="data-block conclusion-grid">
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-red);">01</div>
+                <h4>Facts, Not Verdicts</h4>
+                <p>TwelveLabs' Pegasus model reports what it sees (players read off shirts, brands and how prominent they are, minors, scene types), each with its own evidence and certainty. The rules engine makes the decisions. Over 27 runs on 133 assets, we compared the output with hand labels, reviewed every miss, and rewrote the instructions. The model's main failure was inventing brands, so nothing partner-specific is sent to it; partners are matched in the engine.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">02</div>
+                <h4>Nothing Dropped</h4>
+                <p>The 24 clauses the engine can't check automatically go to <strong>review</strong>, never silently pass. When a new partner signs, their agreement is translated into rules, checked, approved, and run against every stored clip, without re-watching anything.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header">03</div>
+                <h4>Fix, Don't Delete</h4>
+                <p>When a rule fails, the engine names what in the frame caused it, blurs or covers it on a copy, and reruns the copy against every rule sheet. The original stays untouched, and only a pass counts as a fix.</p>
+            </div>
+        </section>
+
+        <section class="text-explanation coursework-block">
+            <header class="section-header">
+                <span class="category-tag">A Team of Five</span>
+                <h2>Five Parallel Tracks</h2>
+            </header>
+            <p>
+                The team split the system into five tracks that never stepped on each other: the <strong>rules engine and front end</strong>, the <strong>fact finder</strong> (TwelveLabs), the <strong>ScorePlay write-back</strong> (mine), <strong>remediation</strong>, and <strong>contracts</strong>. A shared file defining the 16 segment types was the contract everyone coded against: both the rules and the video side could reference those types and nothing else.
+            </p>
+        </section>
+
+        <!-- MY CONTRIBUTION -->
+        <header class="stats-divider" id="scoreplay">
+            <div class="main-container">
+                <h3>My Contribution: The ScorePlay Integration</h3>
+            </div>
+        </header>
+
+        <section class="story-block">
+            <header class="section-header">
+                <span class="category-tag">Decisions Live Where the Content Lives</span>
+                <h2>Putting the Verdicts Inside ScorePlay</h2>
+            </header>
+            <p>
+                I owned the write-back track: the Python module that takes the rules engine's results and writes them onto each clip in <strong>ScorePlay</strong>, the platform clubs already use to manage their media. There's no separate dashboard. Content managers and partners see every verdict, and the evidence behind it, where they already work.
+            </p>
+        </section>
+
+        <section class="data-block conclusion-grid">
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-red);">01</div>
+                <h4>Clearance Tags</h4>
+                <p>One tag per rule sheet on every clip, <code>&lt;sheet&gt;_pass</code>, <code>_review</code>, or <code>_block</code>, under a single Clearance group. A walk-out can carry <code>youtube_pass</code> alongside <code>nike_block</code>.</p>
+                <ul class="stats-list">
+                    <li>The new status is written before stale ones are removed, so a clip is never left without one.</li>
+                    <li>Every change is <strong>read back to verify</strong>, and only our tags are ever touched.</li>
+                    <li>A timed-out write is never blindly retried, so it can't create duplicates.</li>
+                </ul>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">02</div>
+                <h4>Timecoded Evidence Logs</h4>
+                <p>For videos, one log for each rule that fired or couldn't be decided, placed on the clip's timeline from TwelveLabs' segment evidence: the rule, then <strong>what was seen</strong>.</p>
+                <ul class="stats-list">
+                    <li>Near-touching ranges are merged, single-frame hits are widened to 1 s, and everything is clamped to the clip's real length.</li>
+                    <li>Comments state facts and rules only, because partners can read every log on a clip.</li>
+                    <li>A run replaces only its own rule sheet's logs, so reruns are safe and change nothing.</li>
+                </ul>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header">03</div>
+                <h4>Contract Parser</h4>
+                <p>Before the write-back, I built a parser that turns a sponsor or media-rights agreement (PDF, DOCX, or text) into a JSON rulebook of machine-checkable <strong>WHEN / THEN / BECAUSE</strong> rules, each tied to its source clause.</p>
+                <ul class="stats-list">
+                    <li>Uses Claude tool use, with a deterministic regex fallback.</li>
+                    <li>Rules can only reference a closed vocabulary of signals, so the parser can't invent facts the engine can't compute.</li>
+                    <li>Its extraction was one of the inputs to the team's shared segment types.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="data-block split gate-block">
+            <div class="gate-number" aria-label="71 clips, then 0, then 1">
+                <span>71</span><i>&rarr;</i><span>0</span><i>&rarr;</i><span class="hl">1</span>
+            </div>
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">Why the Tags Matter</span>
+                    <h2>Partners See Only What's Cleared</h2>
+                </header>
+                <p>
+                    On day one, the team tested this with a <strong>real partner login</strong>. The partner could see <strong>71 clips</strong>. With access gated on our clearance tag, it saw <strong>0</strong>. After one clip was cleared, it saw <strong>exactly 1</strong>. ScorePlay's own sponsor tag means &ldquo;logo seen,&rdquo; not &ldquo;partner may see,&rdquo; so gating on it would have shown clips nobody had cleared.
+                </p>
+                <p>
+                    My write-back is what makes that work across the whole library: a partner's access includes <code>nike_pass</code> and excludes every <code>_block</code> and <code>_review</code> tag that applies to them, and exclude always beats include.
+                </p>
+            </div>
+        </section>
+
+        <section class="text-explanation coursework-block">
+            <header class="section-header">
+                <span class="category-tag">Built With</span>
+                <h2>Tools &amp; Partners</h2>
+            </header>
+            <ul class="tag-list">
+                <li>Python</li>
+                <li>ScorePlay REST API</li>
+                <li>TwelveLabs Pegasus 1.6</li>
+                <li>Claude Tool Use</li>
+                <li>Pydantic</li>
+                <li>Rules Engine</li>
+                <li>Video Understanding</li>
+                <li>Prompt Iteration &amp; Evaluation</li>
+                <li>Image Remediation</li>
+                <li>Rights &amp; Compliance</li>
+            </ul>
+            <p class="card-link-row">
+                <a href="https://github.com/jv92admin/spurs2-hackathon" target="_blank" rel="noopener">View the team repository on GitHub &rarr;</a>
+            </p>
+        </section>
+
+    </main>
+
+    <section class="final-statement">
+        <div class="main-container">
+            <h3 class="contact-title">Winning Submission</h3>
+            <p>Spurs² Hackathon &middot; UT Austin &middot; ScorePlay &times; TwelveLabs &times; Tottenham Hotspur &times; San Antonio Spurs</p>
+            <div class="hero-actions centered">
+                <a href="https://github.com/jv92admin/spurs2-hackathon" class="btn btn-red" target="_blank" rel="noopener">View the Code</a>
+                <a href="projects.html" class="btn btn-outline">More Projects</a>
+                <a href="index.html#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="main-container">&copy; 2026 David Coronado</div>
+    </footer>
+
+</body>
+</html>

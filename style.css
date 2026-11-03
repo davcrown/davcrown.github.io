@@ -869,6 +869,67 @@ a:hover {
     margin-top: 0;
 }
 
+.hero-photo {
+    padding: 20px 40px 20px 0;
+}
+
+.hero-photo img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border: 6px solid var(--nba-white);
+    box-shadow: 10px 10px 0 var(--nba-red);
+    cursor: default;
+}
+
+.stat-cards.four-stats {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 40px 0 0;
+}
+
+.conclusion-card p + .stats-list {
+    margin-top: 12px;
+}
+
+.card-link-row {
+    margin-top: 10px;
+}
+
+.conclusion-card code {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.85em;
+    background: rgba(29, 66, 138, 0.08);
+    color: var(--nba-blue);
+    padding: 1px 5px;
+    border-radius: 2px;
+}
+
+.gate-block {
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.gate-number {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--nba-blue);
+}
+
+.gate-number i {
+    font-style: normal;
+    font-size: 3.5rem;
+    color: var(--caption-gray);
+    opacity: 0.5;
+}
+
+.gate-number .hl {
+    color: var(--nba-red);
+}
+
 .conclusion-grid.four-up {
     grid-template-columns: repeat(4, 1fr);
 }
@@ -965,8 +1026,26 @@ a:hover {
     }
 
     .conclusion-grid.two-up,
-    .conclusion-grid.four-up {
+    .conclusion-grid.four-up,
+    .gate-block {
         grid-template-columns: 1fr;
+    }
+
+    .stat-cards.four-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-photo {
+        padding: 0 20px 20px;
+        order: -1;
+    }
+
+    .gate-number {
+        font-size: 3.5rem;
+    }
+
+    .gate-number i {
+        font-size: 2.2rem;
     }
 
     .page-hero {
