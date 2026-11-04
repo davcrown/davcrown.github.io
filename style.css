@@ -93,7 +93,7 @@ html {
 .galaxy-hero h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3.5rem;
-    font-weight: 1000; 
+    font-weight: 800;
     color: var(--nba-white);
     text-shadow: 3px 3px 0px var(--nba-red);
 }
@@ -824,6 +824,38 @@ a:hover {
     grid-template-columns: 1fr;
 }
 
+.team-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.team-list li {
+    background: #fff;
+    border-top: 4px solid var(--nba-blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.team-list li.me {
+    border-top-color: var(--nba-red);
+}
+
+.team-list li strong {
+    color: var(--nba-blue);
+}
+
+.team-list li span {
+    color: #555;
+}
+
 .school-location {
     font-size: 0.85rem;
     color: var(--caption-gray);
@@ -1108,7 +1140,8 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .stat-cards.four-stats {
+    .stat-cards.four-stats,
+    .team-list {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -1166,4 +1199,58 @@ a:hover {
     .top-nav .site-title {
         width: 100%;
     }
+}
+
+/* --- Readable line length for long-form text --- */
+.intro-block p,
+.story-block p,
+.about-block p,
+.coursework-block > p,
+.data-block.centered .text-explanation p {
+    max-width: 75ch;
+}
+
+.data-block.centered .text-explanation p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Compact phone nav: not sticky, links on one swipeable row --- */
+@media (max-width: 900px) {
+    .top-nav {
+        position: static;
+        padding: 10px 0 6px;
+    }
+
+    .nav-inner {
+        gap: 6px;
+    }
+
+    .nav-links {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 18px;
+        width: 100%;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    html {
+        scroll-padding-top: 0;
+    }
+}
+
+.story-block {
+    max-width: calc(75ch + 80px);
+    margin-left: auto;
+    margin-right: auto;
 }

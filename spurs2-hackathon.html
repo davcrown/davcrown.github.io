@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spurs² Hackathon | David Coronado</title>
     <meta name="description" content="Winning submission at the Spurs² Hackathon: a rights and compliance engine that tells clubs whether a clip can be used, built on TwelveLabs and ScorePlay.">
+    <link rel="icon" href="docs/assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="David Coronado">
+    <meta property="og:title" content="Spurs² Hackathon | David Coronado">
+    <meta property="og:description" content="Winning submission at the Spurs² Hackathon: a rights and compliance engine that tells clubs whether a clip can be used, built on TwelveLabs and ScorePlay.">
+    <meta property="og:url" content="https://davcrown.github.io/spurs2-hackathon.html">
+    <meta property="og:image" content="https://davcrown.github.io/docs/assets/spurs2-hackathon.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -89,7 +97,7 @@
         </section>
 
         <figure class="shot funnel-figure">
-            <a href="docs/assets/spurs2/funnel.png" target="_blank" rel="noopener" class="shot-link"><img src="docs/assets/spurs2/funnel.png" alt="From fine print to primitives: 109 sources read (9 agreements, 72 public rules, 28 organiser questions) become about 330 requirements, which reduce to 15 observed types plus 4 clip facts (61 fields, plus 22 post details and 73 records). One rules engine with 8 rule sheets and 183 rules (24 clauses it can't check go to review) produces 910 answers: 130 clips across 7 rule sheets, 193 yes, 274 review, 426 no."></a>
+            <a href="docs/assets/spurs2/funnel.png" target="_blank" rel="noopener" class="shot-link"><img loading="lazy" decoding="async" src="docs/assets/spurs2/funnel.png" alt="From fine print to primitives: 109 sources read (9 agreements, 72 public rules, 28 organiser questions) become about 330 requirements, which reduce to 15 observed types plus 4 clip facts (61 fields, plus 22 post details and 73 records). One rules engine with 8 rule sheets and 183 rules (24 clauses it can't check go to review) produces 910 answers: 130 clips across 7 rule sheets, 193 yes, 274 review, 426 no."></a>
             <figcaption>From fine print to primitives: every source funnels into a small set of facts, one rules engine, and a verdict for every clip and rule sheet (click to enlarge)</figcaption>
         </figure>
 
@@ -113,11 +121,11 @@
 
         <section class="before-after">
             <figure class="shot">
-                <a href="docs/assets/spurs2/remediation-before.jpg" target="_blank" rel="noopener" class="shot-link"><img src="docs/assets/spurs2/remediation-before.jpg" alt="Before: a goalkeeper's warm-up top showing the Betano betting logo"></a>
+                <a href="docs/assets/spurs2/remediation-before.jpg" target="_blank" rel="noopener" class="shot-link"><img loading="lazy" decoding="async" src="docs/assets/spurs2/remediation-before.jpg" alt="Before: a goalkeeper's warm-up top showing the Betano betting logo"></a>
                 <figcaption><span class="ba-label">Before</span> Betano, a betting brand, on the keeper's top</figcaption>
             </figure>
             <figure class="shot">
-                <a href="docs/assets/spurs2/remediation-after.jpg" target="_blank" rel="noopener" class="shot-link"><img src="docs/assets/spurs2/remediation-after.jpg" alt="After: the same photo with the Betano logo removed"></a>
+                <a href="docs/assets/spurs2/remediation-after.jpg" target="_blank" rel="noopener" class="shot-link"><img loading="lazy" decoding="async" src="docs/assets/spurs2/remediation-after.jpg" alt="After: the same photo with the Betano logo removed"></a>
                 <figcaption><span class="ba-label after">After</span> The logo removed on a copy, then rechecked</figcaption>
             </figure>
         </section>
@@ -128,8 +136,15 @@
                 <h2>Five Parallel Tracks</h2>
             </header>
             <p>
-                The team split the system into five tracks that never stepped on each other: the <strong>rules engine and front end</strong>, the <strong>fact finder</strong> (TwelveLabs), the <strong>ScorePlay write-back</strong> (mine), <strong>remediation</strong>, and <strong>contracts</strong>. A shared file defining the 16 segment types was the contract everyone coded against: both the rules and the video side could reference those types and nothing else.
+                The team split the system into five tracks that never stepped on each other. A shared file defining the 16 segment types was the contract everyone coded against: both the rules and the video side could reference those types and nothing else.
             </p>
+            <ul class="team-list">
+                <li><strong>Vignesh Jeyaraman</strong><span>Core architecture and rules engine</span></li>
+                <li><strong>Jonathan K.</strong><span>Rules research and contract library</span></li>
+                <li class="me"><strong>David Coronado</strong><span>Logging loop and ScorePlay write-back</span></li>
+                <li><strong>Ayuj Verma</strong><span>Media remediation and UI integration</span></li>
+                <li><strong>Swarnim Bagre</strong><span>TwelveLabs pipeline and evaluation</span></li>
+            </ul>
         </section>
 
         <!-- MY CONTRIBUTION -->
@@ -154,7 +169,7 @@
                 <div class="icon-header" style="color: var(--nba-red);">01</div>
                 <h4>Clearance Tags</h4>
                 <figure class="shot">
-                    <a href="docs/assets/spurs2/clearance-tags.jpg" target="_blank" rel="noopener" class="shot-link"><img src="docs/assets/spurs2/clearance-tags.jpg" alt="A walk-out photo in ScorePlay with clearance tags: premier_league block, nike block, youtube pass, test_partner_distribution_terms block"></a>
+                    <a href="docs/assets/spurs2/clearance-tags.jpg" target="_blank" rel="noopener" class="shot-link"><img loading="lazy" decoding="async" src="docs/assets/spurs2/clearance-tags.jpg" alt="A walk-out photo in ScorePlay with clearance tags: premier_league block, nike block, youtube pass, test_partner_distribution_terms block"></a>
                     <figcaption>A walk-out photo with its clearance tags in ScorePlay (click to enlarge)</figcaption>
                 </figure>
                 <p>One tag per rule sheet on every clip, <code>&lt;sheet&gt;_pass</code>, <code>_review</code>, or <code>_block</code>, under a single Clearance group. A walk-out can carry <code>youtube_pass</code> alongside <code>nike_block</code>.</p>
@@ -168,7 +183,7 @@
                 <div class="icon-header" style="color: var(--nba-blue);">02</div>
                 <h4>Timecoded Evidence Logs</h4>
                 <figure class="shot">
-                    <a href="docs/assets/spurs2/evidence-logs.jpg" target="_blank" rel="noopener" class="shot-link"><img src="docs/assets/spurs2/evidence-logs.jpg" alt="ScorePlay's video Logs panel showing two timecoded evidence logs, one flagging Methodist HEALTHCARE on the perimeter boards"></a>
+                    <a href="docs/assets/spurs2/evidence-logs.jpg" target="_blank" rel="noopener" class="shot-link"><img loading="lazy" decoding="async" src="docs/assets/spurs2/evidence-logs.jpg" alt="ScorePlay's video Logs panel showing two timecoded evidence logs, one flagging Methodist HEALTHCARE on the perimeter boards"></a>
                     <figcaption>Evidence logs on a video's timeline (click to enlarge)</figcaption>
                 </figure>
                 <p>For videos, one log for each rule that fired or couldn't be decided, placed on the clip's timeline from TwelveLabs' segment evidence: the rule, then <strong>what was seen</strong>.</p>
@@ -196,7 +211,7 @@
                     <span>71</span><i>&rarr;</i><span>0</span><i>&rarr;</i><span class="hl">1</span>
                 </div>
                 <figure class="shot">
-                    <a href="docs/assets/spurs2/partner-view.jpg" target="_blank" rel="noopener" class="shot-link"><img src="docs/assets/spurs2/partner-view.jpg" alt="A photo in ScorePlay tagged test_partner_distribution_terms pass, which makes it visible to that partner"></a>
+                    <a href="docs/assets/spurs2/partner-view.jpg" target="_blank" rel="noopener" class="shot-link"><img loading="lazy" decoding="async" src="docs/assets/spurs2/partner-view.jpg" alt="A photo in ScorePlay tagged test_partner_distribution_terms pass, which makes it visible to that partner"></a>
                     <figcaption>A photo cleared for the test partner, so it shows in their library</figcaption>
                 </figure>
             </div>
