@@ -15,11 +15,11 @@ body {
 
 :root {
     --nba-blue: #1D428A;
-    --nba-red: #C8102E;
+    --accent: #4A6FA5;
     --nba-white: #FFFFFF;
     --max-width: 1440px;
     --caption-gray: #6c757d;
-    --highlight-green: var(--nba-red);
+    --highlight-green: var(--accent);
 }
 
 html {
@@ -41,7 +41,7 @@ html {
     align-items: center; 
     width: 100%;
     background: linear-gradient(135deg, #0a1f44 0%, var(--nba-blue) 100%);
-    border-bottom: 12px solid var(--nba-red);
+    border-bottom: 12px solid var(--accent);
     margin-top: 0px;
     min-height: auto;
 }
@@ -83,7 +83,7 @@ html {
     background-color: var(--nba-blue);
     color: var(--nba-white);
     padding: 12px 0;
-    border-bottom: 4px solid var(--nba-red); 
+    border-bottom: 4px solid var(--accent); 
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -95,7 +95,6 @@ html {
     font-size: 3.5rem;
     font-weight: 800;
     color: var(--nba-white);
-    text-shadow: 3px 3px 0px var(--nba-red);
 }
 
 .galaxy-hero h2 {
@@ -116,7 +115,7 @@ html {
 
 
 .bio-text p strong {
-    color: var(--nba-red); 
+    color: var(--accent); 
 }
 a {
     color: var(--nba-blue);
@@ -127,8 +126,8 @@ a {
 }
 
 a:hover {
-    color: var(--nba-red);
-    border-bottom: 2px solid var(--nba-red);
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
 }
 
 .data-block p {
@@ -348,7 +347,7 @@ a:hover {
 }
 
 .final-statement strong {
-    color: var(--nba-red);
+    color: var(--accent);
 }
 
 
@@ -395,13 +394,13 @@ a:hover {
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--nba-white);
-    border-bottom: 2px solid var(--nba-red);
+    border-bottom: 2px solid var(--accent);
 }
 
 /* --- Sub-page banner --- */
 .page-hero {
     background: linear-gradient(135deg, #0a1f44 0%, var(--nba-blue) 100%);
-    border-bottom: 12px solid var(--nba-red);
+    border-bottom: 12px solid var(--accent);
     padding: 60px 0 50px;
     margin-bottom: 60px;
 }
@@ -412,7 +411,6 @@ a:hover {
     font-weight: 800;
     line-height: 1.1;
     color: var(--nba-white);
-    text-shadow: 3px 3px 0px var(--nba-red);
 }
 
 .conclusion-grid.two-up {
@@ -440,7 +438,7 @@ a:hover {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--nba-red);
+    color: var(--accent);
     margin-bottom: 8px;
 }
 
@@ -489,7 +487,7 @@ a:hover {
     object-fit: cover;
     border-radius: 50%;
     border: 8px solid var(--nba-white);
-    box-shadow: 10px 10px 0 var(--nba-red);
+    box-shadow: 10px 10px 0 var(--accent);
     cursor: default;
 }
 
@@ -521,15 +519,15 @@ a:hover {
     transform: translateY(-2px);
 }
 
-.btn-red {
-    background: var(--nba-red);
+.btn-accent {
+    background: var(--accent);
     color: var(--nba-white);
-    border-color: var(--nba-red);
+    border-color: var(--accent);
 }
 
-.btn-red:hover {
+.btn-accent:hover {
     background: var(--nba-white);
-    color: var(--nba-red);
+    color: var(--accent);
     border: 2px solid var(--nba-white);
 }
 
@@ -552,9 +550,9 @@ a:hover {
 }
 
 .btn-blue:hover {
-    background: var(--nba-red);
+    background: var(--accent);
     color: var(--nba-white);
-    border: 2px solid var(--nba-red);
+    border: 2px solid var(--accent);
 }
 
 /* --- About stat cards --- */
@@ -574,8 +572,8 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
-.stat-card.red {
-    border-top-color: var(--nba-red);
+.stat-card.accent {
+    border-top-color: var(--accent);
 }
 
 .stat-card:hover {
@@ -590,8 +588,8 @@ a:hover {
     line-height: 1.1;
 }
 
-.stat-card.red .stat-number {
-    color: var(--nba-red);
+.stat-card.accent .stat-number {
+    color: var(--accent);
 }
 
 .stat-label {
@@ -632,9 +630,9 @@ a:hover {
     top: 10px;
     width: 16px;
     height: 16px;
-    background: var(--nba-red);
+    background: var(--accent);
     border: 3px solid var(--nba-white);
-    box-shadow: 0 0 0 2px var(--nba-red);
+    box-shadow: 0 0 0 2px var(--accent);
     transform: rotate(45deg);
 }
 
@@ -647,7 +645,7 @@ a:hover {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    color: var(--nba-red);
+    color: var(--accent);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -716,7 +714,7 @@ a:hover {
 }
 
 .project-card:hover h4 {
-    color: var(--nba-red);
+    color: var(--accent);
 }
 
 .tag-list {
@@ -755,7 +753,7 @@ a:hover {
 
 .story-block {
     background-color: #f8f9fa;
-    border-left: 6px solid var(--nba-red);
+    border-left: 6px solid var(--accent);
     padding: 40px;
     margin: 0 0 80px;
     font-size: 1.1rem;
@@ -780,7 +778,7 @@ a:hover {
 }
 
 .project-card:hover .card-link {
-    color: var(--nba-red);
+    color: var(--accent);
 }
 
 .coursework-block {
@@ -802,7 +800,7 @@ a:hover {
 }
 
 .course-list li strong {
-    color: var(--nba-red);
+    color: var(--accent);
     margin-right: 8px;
 }
 
@@ -845,7 +843,7 @@ a:hover {
 }
 
 .team-list li.me {
-    border-top-color: var(--nba-red);
+    border-top-color: var(--accent);
 }
 
 .team-list li strong {
@@ -864,13 +862,13 @@ a:hover {
 .gpa {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    color: var(--nba-red);
+    color: var(--accent);
     letter-spacing: 1px;
 }
 
 .in-progress {
     display: inline-block;
-    background: var(--nba-red);
+    background: var(--accent);
     color: var(--nba-white);
     font-size: 0.7rem;
     font-weight: 500;
@@ -918,7 +916,7 @@ a:hover {
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border: 6px solid var(--nba-white);
-    box-shadow: 10px 10px 0 var(--nba-red);
+    box-shadow: 10px 10px 0 var(--accent);
     cursor: default;
 }
 
@@ -991,7 +989,7 @@ a:hover {
 }
 
 .ba-label.after {
-    background: var(--nba-red);
+    background: var(--accent);
 }
 
 .conclusion-card p + .stats-list {
@@ -1035,7 +1033,7 @@ a:hover {
 }
 
 .gate-number .hl {
-    color: var(--nba-red);
+    color: var(--accent);
 }
 
 .conclusion-grid.four-up {
@@ -1058,12 +1056,11 @@ a:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     text-transform: uppercase;
-    text-shadow: 3px 3px 0 var(--nba-red);
     margin-bottom: 10px;
 }
 
 .final-statement {
-    border-top: 12px solid var(--nba-red);
+    border-top: 12px solid var(--accent);
 }
 
 .site-footer {
