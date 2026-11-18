@@ -1251,3 +1251,90 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* --- Click-to-load dashboard embed (CFB page) --- */
+.embed-actions {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.lazy-embed {
+    position: relative;
+}
+
+.lazy-embed iframe {
+    height: 900px;
+    min-height: 0;
+}
+
+.embed-preview {
+    position: relative;
+}
+
+.embed-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.embed-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(10, 31, 68, 0.15) 0%, rgba(10, 31, 68, 0.55) 100%);
+}
+
+.embed-overlay .btn {
+    font-size: 1rem;
+    padding: 16px 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.embed-open {
+    display: none;
+}
+
+.embed-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background: #f8f9fa;
+    color: var(--nba-blue);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.embed-loading[hidden],
+.embed-preview[hidden] {
+    display: none;
+}
+
+/* Phones: the dashboard needs a desktop width, so show the preview and a link instead */
+@media (max-width: 767px) {
+    .lazy-embed iframe,
+    .lazy-embed .embed-loading,
+    .embed-launch {
+        display: none !important;
+    }
+
+    .lazy-embed .embed-preview {
+        display: block !important;
+    }
+
+    .embed-open {
+        display: inline-block;
+    }
+
+    .embed-overlay .btn {
+        font-size: 0.85rem;
+        padding: 12px 20px;
+    }
+}

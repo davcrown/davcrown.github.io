@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Bayesian Ratings | David Coronado</title>
+    <meta name="description" content="A dynamic hierarchical Bayesian model, fit in Stan, that rates every FBS and FCS college football team each week, with offense and defense estimated separately and adjusted for opponent strength.">
+    <link rel="icon" href="docs/assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="David Coronado">
+    <meta property="og:title" content="CFB Bayesian Ratings | David Coronado">
+    <meta property="og:description" content="A dynamic hierarchical Bayesian model, fit in Stan, that rates every FBS and FCS college football team each week, with offense and defense estimated separately and adjusted for opponent strength.">
+    <meta property="og:url" content="https://davcrown.github.io/cfb-ratings.html">
+    <meta property="og:image" content="https://davcrown.github.io/docs/assets/cfb/cfb-rankings.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="main-container nav-inner">
+            <span class="site-title">CFB Bayesian Ratings</span>
+            <ul class="nav-links">
+                <li><a href="projects.html">&larr; Projects</a></li>
+                <li><a href="#app">Live App</a></li>
+                <li><a href="#model">The Model</a></li>
+                <li><a href="#tech">Tech &amp; Credits</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="galaxy-hero split portfolio-hero">
+        <div class="main-container">
+            <span class="category-tag light">SMGT 431 &middot; Bayesian Modeling &middot; R Shiny</span>
+            <h1>CFB BAYESIAN RATINGS</h1>
+            <h2>WEEKLY TEAM RATINGS FOR EVERY FBS AND FCS PROGRAM</h2>
+            <p class="hero-lede">
+                A dynamic hierarchical Bayesian model that rates every FBS and FCS football team each week, with offense and defense estimated separately and adjusted for opponent strength.
+            </p>
+            <div class="hero-actions">
+                <a href="https://dacrown.shinyapps.io/cfb-bayes-ratings/" class="btn btn-accent" target="_blank" rel="noopener">Open Full Dashboard &#8599;</a>
+                <a href="#model" class="btn btn-outline">How It Works</a>
+            </div>
+        </div>
+        <div class="stat-cards hero-stats">
+            <div class="stat-card">
+                <span class="stat-number">266</span>
+                <span class="stat-label">FBS and FCS teams rated in 2026</span>
+            </div>
+            <div class="stat-card accent">
+                <span class="stat-number">43+</span>
+                <span class="stat-label">Weekly model fits, 2024 &ndash; 2026</span>
+            </div>
+            <div class="stat-card accent">
+                <span class="stat-number">6,000</span>
+                <span class="stat-label">Posterior draws per fit, across 4 chains</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">90%</span>
+                <span class="stat-label">Credible intervals on every rating and rank</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- OVERVIEW -->
+        <section class="intro-block">
+            <p>
+                Win-loss records and polls say little about how good a team actually is, especially across conferences that rarely play each other. This model estimates each team's <strong>offense and defense separately</strong>, adjusts both for the strength of the opponents faced, and reports how uncertain each rating is.
+            </p>
+            <p>
+                It covers the <strong>2024 through 2026 seasons</strong> and is refit every week during the season. Each weekly fit predicts the following week's games, and the dashboard scores those picks against the real results.
+            </p>
+        </section>
+
+        <!-- LIVE APP -->
+        <header class="stats-divider" id="app">
+            <div class="main-container">
+                <h3>The Live Dashboard</h3>
+            </div>
+        </header>
+
+        <section class="app-embed">
+            <p class="embed-actions">
+                <a href="https://dacrown.shinyapps.io/cfb-bayes-ratings/" target="_blank" rel="noopener">Open full dashboard &#8599;</a>
+            </p>
+            <div class="app-frame lazy-embed" id="cfb-embed">
+                <div class="embed-preview">
+                    <img src="docs/assets/cfb/cfb-rankings.jpg" alt="The Rankings tab of the CFB Bayesian Ratings dashboard, with Georgia ranked first and 90% credible intervals for each team" width="1400" height="900">
+                    <div class="embed-overlay">
+                        <button type="button" class="btn btn-accent embed-launch" id="cfb-launch">Launch interactive dashboard</button>
+                        <a href="https://dacrown.shinyapps.io/cfb-bayes-ratings/" class="btn btn-accent embed-open" target="_blank" rel="noopener">Open full dashboard &#8599;</a>
+                    </div>
+                </div>
+                <div class="embed-loading" hidden>Loading dashboard&hellip; the server may take a moment to wake up.</div>
+            </div>
+            <p class="caption">
+                Hosted on shinyapps.io. The app is built for desktop screens, so on a phone it opens in a new tab. On a first visit the server can take 20&ndash;40 seconds to wake up.
+            </p>
+        </section>
+
+        <!-- MODEL -->
+        <header class="stats-divider" id="model">
+            <div class="main-container">
+                <h3>How the Model Works</h3>
+            </div>
+        </header>
+
+        <section class="data-block conclusion-grid">
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--accent);">01</div>
+                <h4>A Three-Level Hierarchy</h4>
+                <p>Teams sit inside conferences, and conferences inside tiers: Power 4, Group of 6, and FCS. Each team's strength follows a weekly random walk, so ratings can change as a season goes on.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header" style="color: var(--nba-blue);">02</div>
+                <h4>Scores, Not Just Wins</h4>
+                <p>A bivariate-normal model of both teams' scores, with a home-field advantage estimated for each team, fit in Stan with 4 chains and 6,000 draws per fit.</p>
+            </div>
+            <div class="conclusion-card">
+                <div class="icon-header">03</div>
+                <h4>Tested Every Week</h4>
+                <p>More than 43 fits, one per week of 2024&ndash;2026. Each fit predicts the following week, and the dashboard scores those predictions against the actual results.</p>
+            </div>
+        </section>
+
+        <section class="data-block split">
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">In the Dashboard</span>
+                    <h2>What You Can Explore</h2>
+                </header>
+                <ul class="stats-list">
+                    <li><strong>Rankings</strong> with 90% credible intervals and rank intervals.</li>
+                    <li><strong>Strength of schedule</strong>, and raw versus opponent-adjusted comparisons.</li>
+                    <li><strong>A game predictor</strong> for any matchup.</li>
+                    <li><strong>Season simulations</strong> for any team, with Rice shown by default.</li>
+                </ul>
+            </div>
+            <div class="text-explanation">
+                <header class="section-header">
+                    <span class="category-tag">Kept Up to Date</span>
+                    <h2>An Automated Weekly Pipeline</h2>
+                </header>
+                <p>
+                    During the season, a pipeline pulls the latest results, fits the new week, and redeploys the app, so the ratings stay current without manual work.
+                </p>
+            </div>
+        </section>
+
+        <!-- TECH & CREDITS -->
+        <header class="stats-divider" id="tech">
+            <div class="main-container">
+                <h3>Tech &amp; Credits</h3>
+            </div>
+        </header>
+
+        <section class="text-explanation coursework-block">
+            <header class="section-header">
+                <span class="category-tag">Built With</span>
+                <h2>Tools &amp; Data</h2>
+            </header>
+            <ul class="tag-list">
+                <li>R</li>
+                <li>Stan (cmdstanr)</li>
+                <li>Shiny</li>
+                <li>bslib</li>
+                <li>reactable</li>
+                <li>ggplot2</li>
+                <li>cfbfastR</li>
+                <li>Bayesian Hierarchical Modeling</li>
+            </ul>
+            <p>
+                Built by David Coronado. Model specification built with Matthew Solomon. Developed from a project in SMGT 431: Advanced Sport Analytics, taught by Dr. Hua Gong. Data from <a href="https://collegefootballdata.com" target="_blank" rel="noopener">CollegeFootballData.com</a>, accessed through cfbfastR.
+            </p>
+        </section>
+
+    </main>
+
+    <section class="final-statement">
+        <div class="main-container">
+            <h3 class="contact-title">Explore the Ratings</h3>
+            <p>Every FBS and FCS team, rated weekly with honest uncertainty.</p>
+            <div class="hero-actions centered">
+                <a href="https://dacrown.shinyapps.io/cfb-bayes-ratings/" class="btn btn-accent" target="_blank" rel="noopener">Open Full Dashboard &#8599;</a>
+                <a href="projects.html" class="btn btn-outline">More Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="main-container">&copy; 2026 David Coronado</div>
+    </footer>
+
+    <script>
+        // Click-to-load: the screenshot stays until the visitor asks for the live app,
+        // so page views don't wake the shinyapps.io server.
+        (function () {
+            var embed = document.getElementById('cfb-embed');
+            var launch = document.getElementById('cfb-launch');
+            if (!embed || !launch) return;
+            launch.addEventListener('click', function () {
+                var loading = embed.querySelector('.embed-loading');
+                var frame = document.createElement('iframe');
+                frame.src = 'https://dacrown.shinyapps.io/cfb-bayes-ratings/';
+                frame.title = 'CFB Bayesian Ratings dashboard';
+                frame.loading = 'lazy';
+                frame.addEventListener('load', function () {
+                    loading.hidden = true;
+                    embed.classList.add('is-loaded');
+                });
+                embed.querySelector('.embed-preview').hidden = true;
+                loading.hidden = false;
+                embed.classList.add('is-live');
+                embed.appendChild(frame);
+            });
+        })();
+    </script>
+
+</body>
+</html>
