@@ -19,7 +19,6 @@ body {
     --nba-white: #FFFFFF;
     --max-width: 1440px;
     --caption-gray: #6c757d;
-    --highlight-green: var(--accent);
 }
 
 html {
@@ -66,16 +65,20 @@ html {
 
 /* Visualization styling */
 .viz img {
+    display: block;
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
     height: auto;
+    margin: 0 auto;
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .data-block.centered {
+    display: block;
     max-width: var(--max-width);
     margin: 100px auto;
+    text-align: center;
 }
 
 /* --- NAVIGATION (NBA Blue Strip) --- */
@@ -115,7 +118,8 @@ html {
 
 
 .bio-text p strong {
-    color: var(--accent); 
+    color: var(--accent);
+    font-size: 1.1rem;
 }
 a {
     color: var(--nba-blue);
@@ -141,14 +145,6 @@ a:hover {
     gap: 20px;
 }
 
-/* All viz images are responsive */
-.viz img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
 /* Standard Caption style */
 .caption {
     text-align: center;
@@ -160,11 +156,6 @@ a:hover {
 
 /* --- LAYOUT VARIANTS --- */
 
-
-.data-block.centered {
-    display: block;
-    text-align: center;
-}
 
 .data-block.centered .text-explanation {
     background: transparent;
@@ -186,11 +177,6 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.bio-text p strong {
-    color: var(--highlight-green);
-    font-size: 1.1rem;
-}
-
 
 .intro-block {
     margin-top: 50px;
@@ -203,16 +189,6 @@ a:hover {
 
 .intro-block p { margin-bottom: 1.5rem; }
 
-
-.recap-block {
-    margin: 80px auto;
-    text-align: center;
-    max-width: 800px;
-    color: #555555;
-    font-size: 1.05rem;
-}
-
-.recap-block p { margin-bottom: 1.5rem; }
 
 .stats-divider {
     background-color: var(--nba-blue);
@@ -261,11 +237,6 @@ a:hover {
     border-radius: 4px;
     background: #fff;
     padding: 10px;
-    transition: transform 0.3s ease;
-}
-
-.grid-item .viz img:hover {
-    transform: scale(1.02); /* Subtle zoom for desktop interaction */
 }
 
 /* Stats List Styling */
@@ -288,14 +259,6 @@ a:hover {
 .no-border img {
     border: none !important;
     box-shadow: none !important;
-}
-
-.viz img {
-    transition: transform 0.3s ease;
-    cursor: zoom-in;
-}
-.viz img:hover {
-    transform: scale(1.02);
 }
 
 /* --- CONCLUSION SECTION --- */
@@ -488,7 +451,6 @@ a:hover {
     border-radius: 50%;
     border: 8px solid var(--nba-white);
     box-shadow: 10px 10px 0 var(--accent);
-    cursor: default;
 }
 
 /* --- Buttons --- */
@@ -917,12 +879,6 @@ a:hover {
     object-fit: cover;
     border: 6px solid var(--nba-white);
     box-shadow: 10px 10px 0 var(--accent);
-    cursor: default;
-}
-
-.stat-cards.four-stats {
-    grid-template-columns: repeat(4, 1fr);
-    margin: 40px 0 0;
 }
 
 .shot {
@@ -994,10 +950,6 @@ a:hover {
 
 .conclusion-card p + .stats-list {
     margin-top: 12px;
-}
-
-.card-link-row {
-    margin-top: 10px;
 }
 
 .conclusion-card code {
@@ -1137,7 +1089,6 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .stat-cards.four-stats,
     .team-list {
         grid-template-columns: 1fr 1fr;
     }
