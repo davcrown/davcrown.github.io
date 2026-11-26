@@ -86,11 +86,11 @@
             <p class="embed-actions">
                 <a href="https://dacrown.shinyapps.io/cfb-bayes-ratings/" target="_blank" rel="noopener">Open full dashboard &#8599;</a>
             </p>
-            <div class="app-frame lazy-embed" id="cfb-embed">
+            <div class="app-frame lazy-embed" id="cfb-embed" data-src="https://dacrown.shinyapps.io/cfb-bayes-ratings/" data-title="CFB Bayesian Ratings dashboard">
                 <div class="embed-preview">
                     <img src="docs/assets/cfb/cfb-rankings.jpg" alt="The Rankings tab of the CFB Bayesian Ratings dashboard, with Georgia ranked first and 90% credible intervals for each team" width="1400" height="900">
                     <div class="embed-overlay">
-                        <button type="button" class="btn btn-accent embed-launch" id="cfb-launch">Launch interactive dashboard</button>
+                        <button type="button" class="btn btn-accent embed-launch">Launch interactive dashboard</button>
                         <a href="https://dacrown.shinyapps.io/cfb-bayes-ratings/" class="btn btn-accent embed-open" target="_blank" rel="noopener">Open full dashboard &#8599;</a>
                     </div>
                 </div>
@@ -194,30 +194,7 @@
         <div class="main-container">&copy; 2026 David Coronado</div>
     </footer>
 
-    <script>
-        // Click-to-load: the screenshot stays until the visitor asks for the live app,
-        // so page views don't wake the shinyapps.io server.
-        (function () {
-            var embed = document.getElementById('cfb-embed');
-            var launch = document.getElementById('cfb-launch');
-            if (!embed || !launch) return;
-            launch.addEventListener('click', function () {
-                var loading = embed.querySelector('.embed-loading');
-                var frame = document.createElement('iframe');
-                frame.src = 'https://dacrown.shinyapps.io/cfb-bayes-ratings/';
-                frame.title = 'CFB Bayesian Ratings dashboard';
-                frame.loading = 'lazy';
-                frame.addEventListener('load', function () {
-                    loading.hidden = true;
-                    embed.classList.add('is-loaded');
-                });
-                embed.querySelector('.embed-preview').hidden = true;
-                loading.hidden = false;
-                embed.classList.add('is-live');
-                embed.appendChild(frame);
-            });
-        })();
-    </script>
+    <script src="embed.js"></script>
 
 </body>
 </html>

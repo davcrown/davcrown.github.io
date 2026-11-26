@@ -22,7 +22,7 @@
         <div class="main-container nav-inner">
             <span class="site-title">RUPD Crime Log Dashboard</span>
             <ul class="nav-links">
-                <li><a href="index.html">&larr; Portfolio</a></li>
+                <li><a href="projects.html">&larr; Projects</a></li>
                 <li><a href="#app">Live App</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#ethics">Ethics</a></li>
@@ -84,12 +84,21 @@
         </header>
 
         <section class="app-embed">
-            <div class="app-frame">
-                <iframe src="https://dacrown.shinyapps.io/ethicsdashboard/" title="RUPD Crime Log Dashboard" loading="lazy"></iframe>
+            <p class="embed-actions">
+                <a href="https://dacrown.shinyapps.io/ethicsdashboard/" target="_blank" rel="noopener">Open full dashboard &#8599;</a>
+            </p>
+            <div class="app-frame lazy-embed" data-src="https://dacrown.shinyapps.io/ethicsdashboard/" data-title="RUPD Crime Log Dashboard">
+                <div class="embed-preview">
+                    <img src="docs/assets/dashboard.jpg" alt="The Incident Map tab of the RUPD Crime Log Dashboard, with filters and incidents grouped by location" width="1400" height="900">
+                    <div class="embed-overlay">
+                        <button type="button" class="btn btn-accent embed-launch">Launch interactive dashboard</button>
+                        <a href="https://dacrown.shinyapps.io/ethicsdashboard/" class="btn btn-accent embed-open" target="_blank" rel="noopener">Open full dashboard &#8599;</a>
+                    </div>
+                </div>
+                <div class="embed-loading" hidden>Loading dashboard&hellip; the server may take a moment to wake up.</div>
             </div>
             <p class="caption">
-                Hosted on shinyapps.io &mdash; it can take a few seconds to wake up.
-                <a href="https://dacrown.shinyapps.io/ethicsdashboard/" target="_blank" rel="noopener">Open it in a new tab</a> for the full-screen experience.
+                Hosted on shinyapps.io. The app is built for desktop screens, so on a phone it opens in a new tab. On a first visit the server can take a little while to wake up.
             </p>
         </section>
 
@@ -266,6 +275,8 @@
     <footer class="site-footer">
         <div class="main-container">&copy; 2026 David Coronado</div>
     </footer>
+
+    <script src="embed.js"></script>
 
 </body>
 </html>
